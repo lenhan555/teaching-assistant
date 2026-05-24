@@ -1,0 +1,26 @@
+[2026-05-24 18:45] agentic-team-build
+  Input:   Full agentic team build — 7 agents, 2 workflows, 4 skills, 3 content directories
+  Output:  agents/researcher.md
+           agents/synthesizer.md
+           agents/slide-generator.md
+           agents/assignment-generator.md
+           agents/rubric-builder.md
+           agents/grading-agent.md
+           agents/cohort-feedback.md
+           workflows/full-course-prep.md
+           workflows/grading-run.md
+           skills/excel-knowledge-research-update/SKILL.md
+           skills/power-bi-knowledge-research-update/SKILL.md
+           skills/assignment-generator/SKILL.md
+           skills/rubric-builder/SKILL.md
+           assignments/ (directory)
+           rubrics/ (directory)
+           grades/ (directory)
+  Status:  success
+  Notes:   assignment-generator supports --type take-home and --type in-class per instructor request
+
+[2026-05-24 19:16] agentic-team-build
+  Input:   Excel grading phase — scan Excel submissions and reconcile against lesson assignments
+  Output:  agents/excel-scanner/AGENT.md, agents/excel-reconciler/AGENT.md, workflows/excel-grading-phase.md; updated agents/grading-agent/AGENT.md
+  Status:  success
+  Notes:   Two new agents (excel-scanner, excel-reconciler) added to grading pipeline. Grading agent extended with optional reconciliation_file input. Workflow trigger: /grade-excel-cohort <subject> <level> <cohort_id> <submissions_dir>
