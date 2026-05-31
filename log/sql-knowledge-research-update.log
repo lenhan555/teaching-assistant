@@ -1,0 +1,11 @@
+[2026-05-25 00:00] sql-knowledge-research-update
+  Input:   all levels, general topic
+  Output:  skills/sql-beginner-general.md, skills/sql-intermediate-general.md, skills/sql-advanced-general.md
+  Status:  success
+  Notes:   First run — no prior SQL docs existed. Created all three level files from scratch.
+
+[2026-05-29 00:00] sql-knowledge-research-update — SYSTEM NOTE
+  Input:   —
+  Output:  —
+  Status:  no change
+  Notes:   No changes to sql-knowledge-research-update skill this session. System update: slides produced from SQL knowledge docs now go through the PPT Master SVG pipeline (tools/svgs_to_pptx.py) instead of the old API route. Knowledge doc location and format unchanged: skills/sql-[level]-[topic].md.

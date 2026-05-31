@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1A6B3A"/>
+  <ellipse cx="640" cy="60" rx="400" ry="150" fill="#5CDB8F" opacity="0.12"/>
+  <text x="640" y="90" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">Section 5 —</text>
+  <text x="640" y="128" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="34" font-weight="700" fill="#5CDB8F" text-anchor="middle">Multiple JOINs</text>
+  <!-- Chain diagram: Customers → Orders → Products -->
+  <!-- Customers box -->
+  <rect x="60" y="195" width="260" height="70" rx="8" fill="#FFFFFF" opacity="0.15" stroke="#2EAA5E" stroke-width="2"/>
+  <text x="190" y="228" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Customers</text>
+  <text x="190" y="248" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.7" text-anchor="middle">CustomerID, Name, City</text>
+  <!-- Arrow 1 -->
+  <line x1="320" y1="230" x2="430" y2="230" stroke="#5CDB8F" stroke-width="2.5"/>
+  <polygon points="430,222 452,230 430,238" fill="#5CDB8F"/>
+  <text x="386" y="220" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">JOIN</text>
+  <!-- Orders box (center - fact table) -->
+  <rect x="452" y="195" width="280" height="70" rx="8" fill="#2EAA5E" opacity="0.9"/>
+  <text x="592" y="222" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Orders</text>
+  <text x="592" y="242" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#FFFFFF" opacity="0.85" text-anchor="middle">OrderID, CustomerID, ProductID, Amount</text>
+  <text x="592" y="258" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#5CDB8F" text-anchor="middle">← fact table (has all foreign keys)</text>
+  <!-- Arrow 2 -->
+  <line x1="732" y1="230" x2="840" y2="230" stroke="#5CDB8F" stroke-width="2.5"/>
+  <polygon points="840,222 862,230 840,238" fill="#5CDB8F"/>
+  <text x="796" y="220" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">JOIN</text>
+  <!-- Products box -->
+  <rect x="862" y="195" width="280" height="70" rx="8" fill="#FFFFFF" opacity="0.15" stroke="#2EAA5E" stroke-width="2"/>
+  <text x="1002" y="228" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Products</text>
+  <text x="1002" y="248" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.7" text-anchor="middle">ProductID, ProductName, Category</text>
+  <!-- Three bullets -->
+  <circle cx="100" cy="350" r="18" fill="#2EAA5E"/>
+  <text x="100" y="356" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="132" y="355" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#FFFFFF">You can chain as many JOINs as needed in a single query</text>
+  <circle cx="100" cy="405" r="18" fill="#2EAA5E"/>
+  <text x="100" y="411" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="132" y="410" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#FFFFFF">Each JOIN adds one more table — SQL processes top to bottom</text>
+  <circle cx="100" cy="460" r="18" fill="#2EAA5E"/>
+  <text x="100" y="466" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="132" y="465" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#FFFFFF">Start FROM the fact table — the one with all the foreign keys</text>
+  <!-- Extended schema note -->
+  <rect x="100" y="510" width="1080" height="60" rx="8" fill="#FFFFFF" opacity="0.12"/>
+  <text x="640" y="536" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#5CDB8F" text-anchor="middle">Extended schema for this section:</text>
+  <text x="640" y="556" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Customers (CustomerID, Name)  ←  Orders (OrderID, CustomerID, ProductID, Amount)  →  Products (ProductID, ProductName)</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#FFFFFF" opacity="0.4">25</text>
+</svg>

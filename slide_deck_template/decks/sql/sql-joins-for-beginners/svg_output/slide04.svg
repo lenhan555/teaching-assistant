@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <!-- Left panel -->
+  <text x="60" y="110" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#1A1A2E">Why</text>
+  <text x="60" y="155" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#2EAA5E">Multiple Tables?</text>
+  <line x1="60" y1="170" x2="500" y2="170" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="60" y="205" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">Real databases split data to avoid repetition.</text>
+  <text x="60" y="235" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">• Instead of repeating customer info on every</text>
+  <text x="72" y="255" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">  order, store customers once, reference by ID</text>
+  <text x="60" y="285" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">• This is called </text>
+  <text x="60" y="307" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">  normalization</text>
+  <text x="60" y="330" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">• Tables connect via a shared column called a</text>
+  <text x="60" y="350" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">  foreign key</text>
+  <text x="60" y="380" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">• A JOIN tells SQL: "combine rows where</text>
+  <text x="60" y="400" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">  the keys match"</text>
+  <text x="60" y="430" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">• Without JOINs, you cannot answer most</text>
+  <text x="60" y="450" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">  real business questions</text>
+  <!-- Right panel: two-table diagram -->
+  <!-- Customers table -->
+  <rect x="560" y="140" width="260" height="160" rx="8" fill="#FFFFFF" stroke="#2EAA5E" stroke-width="2"/>
+  <rect x="560" y="140" width="260" height="36" rx="8" fill="#2EAA5E"/>
+  <rect x="560" y="160" width="260" height="16" fill="#2EAA5E"/>
+  <text x="690" y="163" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Customers</text>
+  <line x1="560" y1="176" x2="820" y2="176" stroke="#2EAA5E" stroke-width="1"/>
+  <text x="575" y="198" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#2EAA5E">CustomerID</text>
+  <text x="700" y="198" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#4A4A6A">Name</text>
+  <line x1="560" y1="206" x2="820" y2="206" stroke="#E8F8EE" stroke-width="1"/>
+  <text x="575" y="224" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#4A4A6A">1</text>
+  <text x="700" y="224" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#4A4A6A">Alice</text>
+  <text x="575" y="246" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#4A4A6A">2</text>
+  <text x="700" y="246" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#4A4A6A">Bob</text>
+  <text x="575" y="268" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#4A4A6A">3</text>
+  <text x="700" y="268" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#4A4A6A">Carol</text>
+  <!-- Arrow -->
+  <line x1="820" y1="220" x2="920" y2="220" stroke="#2EAA5E" stroke-width="2"/>
+  <polygon points="920,213 936,220 920,227" fill="#2EAA5E"/>
+  <text x="878" y="210" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="400" fill="#2EAA5E" text-anchor="middle">JOIN on</text>
+  <text x="878" y="222" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="700" fill="#2EAA5E" text-anchor="middle">CustomerID</text>
+  <!-- Orders table -->
+  <rect x="936" y="140" width="284" height="180" rx="8" fill="#FFFFFF" stroke="#2EAA5E" stroke-width="2"/>
+  <rect x="936" y="140" width="284" height="36" rx="8" fill="#2EAA5E"/>
+  <rect x="936" y="160" width="284" height="16" fill="#2EAA5E"/>
+  <text x="1078" y="163" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Orders</text>
+  <line x1="936" y1="176" x2="1220" y2="176" stroke="#2EAA5E" stroke-width="1"/>
+  <text x="948" y="198" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">OrderID</text>
+  <text x="1030" y="198" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#2EAA5E">CustomerID</text>
+  <text x="1150" y="198" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">Amount</text>
+  <line x1="936" y1="206" x2="1220" y2="206" stroke="#E8F8EE" stroke-width="1"/>
+  <text x="948" y="224" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">101</text>
+  <text x="1030" y="224" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">1</text>
+  <text x="1150" y="224" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">1200</text>
+  <text x="948" y="246" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">102</text>
+  <text x="1030" y="246" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">2</text>
+  <text x="1150" y="246" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">800</text>
+  <!-- Key concept callout -->
+  <rect x="560" y="360" width="660" height="80" rx="8" fill="#E8F8EE" stroke="#2EAA5E" stroke-width="1"/>
+  <text x="580" y="392" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Key concept:</text>
+  <text x="580" y="416" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">Normalization + Foreign Keys = the foundation of relational databases</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">04</text>
+</svg>

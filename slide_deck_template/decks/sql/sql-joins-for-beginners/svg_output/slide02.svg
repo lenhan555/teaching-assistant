@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <!-- Background white -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <!-- Left panel headline -->
+  <text x="60" y="120" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#1A1A2E">Today's</text>
+  <text x="60" y="165" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#2EAA5E">Agenda</text>
+  <line x1="60" y1="180" x2="480" y2="180" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="60" y="210" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">What you will be able to do by end of class</text>
+  <!-- Right panel icon-badge rows -->
+  <!-- Row 1 -->
+  <circle cx="560" cy="240" r="22" fill="#2EAA5E"/>
+  <text x="560" y="246" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="596" y="244" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#1A1A2E">What is a JOIN and why it matters</text>
+  <!-- Row 2 -->
+  <circle cx="560" cy="310" r="22" fill="#2EAA5E"/>
+  <text x="560" y="316" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="596" y="308" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#1A1A2E">Section 1 — INNER JOIN: matching rows only</text>
+  <!-- Row 3 -->
+  <circle cx="560" cy="380" r="22" fill="#2EAA5E"/>
+  <text x="560" y="386" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="596" y="378" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#1A1A2E">Section 2 — LEFT &amp; RIGHT JOIN: preserving rows</text>
+  <!-- Row 4 -->
+  <circle cx="560" cy="450" r="22" fill="#2EAA5E"/>
+  <text x="560" y="456" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="596" y="448" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#1A1A2E">Section 3 — FULL OUTER JOIN: both sides</text>
+  <!-- Row 5 -->
+  <circle cx="560" cy="520" r="22" fill="#2EAA5E"/>
+  <text x="560" y="526" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+  <text x="596" y="518" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#1A1A2E">Section 4 — CROSS JOIN &amp; Self-Join</text>
+  <!-- Row 6 -->
+  <circle cx="560" cy="590" r="22" fill="#2EAA5E"/>
+  <text x="560" y="596" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <text x="596" y="588" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#1A1A2E">Section 5 — Multiple JOINs &amp; best practices</text>
+  <!-- Row 7 -->
+  <circle cx="560" cy="650" r="22" fill="#2EAA5E"/>
+  <text x="560" y="656" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">7</text>
+  <text x="596" y="648" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#1A1A2E">Wrap-up: common mistakes &amp; next steps</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">02</text>
+</svg>

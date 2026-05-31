@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1A6B3A"/>
+  <ellipse cx="640" cy="60" rx="400" ry="150" fill="#5CDB8F" opacity="0.12"/>
+  <text x="640" y="90" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">Section 4 —</text>
+  <text x="640" y="128" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="34" font-weight="700" fill="#5CDB8F" text-anchor="middle">Self-Join</text>
+  <!-- Left: Employees table card -->
+  <rect x="60" y="160" width="380" height="220" rx="8" fill="#FFFFFF" opacity="0.15"/>
+  <text x="80" y="188" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Employees table:</text>
+  <text x="80" y="215" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">EmpID  Name   ManagerID</text>
+  <line x1="80" y1="222" x2="420" y2="222" stroke="#5CDB8F" stroke-width="1" opacity="0.5"/>
+  <text x="80" y="242" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF">1      Sara   NULL</text>
+  <text x="80" y="262" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF">2      Tom    1</text>
+  <text x="80" y="282" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF">3      Uma    1</text>
+  <text x="80" y="302" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF">4      Vic    2</text>
+  <text x="80" y="355" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#5CDB8F">ManagerID references EmployeeID</text>
+  <text x="80" y="374" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#5CDB8F">in the SAME table — self-reference!</text>
+  <!-- Org chart nodes -->
+  <!-- Sara at top -->
+  <circle cx="640" cy="230" r="44" fill="#2EAA5E"/>
+  <text x="640" y="225" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Sara</text>
+  <text x="640" y="242" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">(CEO)</text>
+  <!-- Lines to Tom and Uma -->
+  <line x1="580" y1="272" x2="480" y2="352" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="700" y1="272" x2="800" y2="352" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- Tom -->
+  <circle cx="480" cy="396" r="44" fill="#2EAA5E"/>
+  <text x="480" y="391" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Tom</text>
+  <text x="480" y="408" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">(Manager: Sara)</text>
+  <!-- Uma -->
+  <circle cx="800" cy="396" r="44" fill="#2EAA5E"/>
+  <text x="800" y="391" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Uma</text>
+  <text x="800" y="408" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">(Manager: Sara)</text>
+  <!-- Line to Vic -->
+  <line x1="480" y1="438" x2="480" y2="518" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- Vic -->
+  <circle cx="480" cy="558" r="44" fill="#2EAA5E"/>
+  <text x="480" y="553" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Vic</text>
+  <text x="480" y="570" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">(Manager: Tom)</text>
+  <!-- Self-join annotation -->
+  <text x="640" y="640" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#5CDB8F" text-anchor="middle">Self-Join: joining Employees to itself using two aliases (employee + manager copy)</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#FFFFFF" opacity="0.4">21</text>
+</svg>

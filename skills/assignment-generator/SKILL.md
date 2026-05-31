@@ -1,3 +1,11 @@
+---
+name: assignment-generator
+description: Generate a take-home or in-class assignment for a given topic and level; optionally save to assignments/.
+arguments: '"<topic>" --level <level> [--type <type>] [--questions N] [--subject <subject>] [--save]'
+outputs:
+  - assignments/[subject]-[level]-[topic-slug]-[type].md
+---
+
 # Skill: assignment-generator
 
 ## Usage
@@ -31,97 +39,36 @@
 
 ### Step 1 — Parse arguments
 
-Extract `topic`, `level`, `type`, `questions`, `subject`, and `--save` flag. Infer `subject` from `topic` if not stated (e.g. topic contains "SQL" → sql, "Excel" → excel, "Power BI" or "DAX" → powerbi). Normalize `topic` to a slug for file naming.
+Extract `topic`, `level`, `type`, `questions`, `subject`, and `--save` flag. Infer `subject` from `topic` if not stated (SQL → `sql`, Excel → `excel`, Power BI / DAX → `powerbi`). Normalize `topic` to a slug.
 
 ---
 
-### Step 2 — Load source material
+### Step 2 — Check for knowledge doc
 
-Check if a knowledge doc exists at `skills/[subject]-[level]-[topic-slug].md`. If found, read it — use it as the content source. If not found, proceed from the topic name alone (no web research at this step; the assignment-generator is a content-shaping skill, not a research skill).
-
----
-
-### Step 3 — Generate assignment
-
-#### Take-Home format
-
-Produce `num_questions` questions. Vary types: at least one MCQ, at least one Short Answer, at least one Practical (for N ≥ 3). Escalate difficulty Easy → Hard across the set.
-
-```
-# Take-Home Assignment: [Topic] ([Level])
-Subject: [subject]
-Due: _______________
-Student name: _______________
-
-## Instructions
-Submit your answers as a document or file. Show your work for practical questions.
-For SQL questions, include your query. For Excel, describe your steps or paste formulas.
-
-## Questions
-
-### Q1 — MCQ [Easy]
-[Stem]
-A) ...  B) ...  C) ...  D) ...
-**Sample answer:** [letter] — [explanation]
-
-### Q2 — Short Answer [Medium]
-[Stem]
-**Sample answer:** [full answer]
-
-### Q3 — Practical [Hard]
-[Realistic scenario + task]
-**Sample answer:** [complete solution with code/formula/steps]
-```
-
-#### In-Class format
-
-Produce `num_questions` practicals (default 2). Each is time-boxed, scenario-driven, and ends with an instructor-only walkthrough.
-
-```
-# In-Class Practical: [Topic] ([Level])
-Subject: [subject]
-Duration: [total estimated time] mins
-Setup: [what the instructor needs ready on screen: dataset, file, query window, etc.]
-
-## Instructor Introduction
-[2–3 sentences to say to the class to frame the exercise]
-
-## Practical 1
-**Time box:** [X] minutes
-**Scenario:** [real-world context]
-**Task:** [step-by-step instruction to students]
-**Hint:** [one nudge — no answer]
-
-### Instructor Walkthrough (after time is up)
-[Step-by-step solution]
-**Key talking points:**
-- [What to emphasize]
-- [Common mistakes to call out]
-```
+Look for an existing knowledge doc at `skills/[subject]-[level]-[topic-slug].md`. Note the path if found — pass it to the agent as `knowledge_doc`.
 
 ---
 
-### Step 4 — Write or print (if `--save`)
+### Step 3 — Spawn Assignment Generator agent
 
-**If `--save` is set:**
-Write to `assignments/[subject]-[level]-[topic-slug]-[type].md`.
-If the file already exists, confirm with the instructor before overwriting.
+Use the Agent tool to spawn the `assignment-generator` subagent with these inputs:
 
-**If `--save` is not set:**
-Print the full assignment inline.
-End with: `Tip: run with --save to write to assignments/[subject]-[level]-[topic-slug]-[type].md`
+```
+subject: [subject]
+topic: [topic]
+level: [level]
+--type: [type]
+num_questions: [questions]
+knowledge_doc: [path if found, omit if not]
+--save: [true if --save flag was set]
+```
+
+Wait for the agent to complete. It will write to (if --save):
+`assignments/[subject]-[level]-[topic-slug]-[type].md`
 
 ---
 
-### Step 5 — Respond and log
+### Step 4 — Report result
 
-Return the full assignment. If `--save` was used, confirm the file path.
-
-Append to `log/assignment-generator.log`:
-```
-[YYYY-MM-DD HH:MM] assignment-generator
-  Input:   topic=[topic] level=[level] type=[type] questions=[N]
-  Output:  assignments/[subject]-[level]-[topic-slug]-[type].md (or "printed only")
-  Status:  success | partial | failed
-  Notes:   [knowledge doc used or not, question types generated]
-```
+If `--save` was used, confirm the file path written.
+If not, the agent's output is already printed inline.

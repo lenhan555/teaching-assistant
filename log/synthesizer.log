@@ -1,0 +1,11 @@
+[2026-05-25 00:00] synthesizer
+  Input:   agents/researcher/output/sql-intermediate-joins-research.md
+  Output:  skills/sql-intermediate-joins.md
+  Status:  success
+  Notes:   New file created (no prior version existed). Synthesized all 6 JOIN types (INNER, LEFT, RIGHT, FULL OUTER, CROSS, SELF), correlated subquery vs JOIN comparison, and join performance section. 7 exercises across Easy/Medium/Hard difficulties. Quick reference table has 11 rows including performance and diagnostic entries.
+
+[2026-05-29 00:00] synthesizer — SYSTEM NOTE
+  Input:   —
+  Output:  —
+  Status:  no change
+  Notes:   No changes to synthesizer agent or workflow this session. System update: blueprint v2 standard established (see sql-intermediate-joins-v2.md). Knowledge docs synthesized by this agent (skills/[subject]-[level]-[topic].md) continue to feed both the slide-generator (Step 2 knowledge_doc lookup) and assignment-generator. Format and location unchanged.

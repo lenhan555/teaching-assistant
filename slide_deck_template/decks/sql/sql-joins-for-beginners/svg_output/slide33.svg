@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1A6B3A"/>
+  <text x="640" y="72" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">Your</text>
+  <text x="640" y="106" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#5CDB8F" text-anchor="middle">Quick Reference Card</text>
+  <!-- Thin underline -->
+  <line x1="160" y1="118" x2="1120" y2="118" stroke="#5CDB8F" stroke-width="1" opacity="0.5"/>
+  <!-- Column separators -->
+  <line x1="450" y1="130" x2="450" y2="680" stroke="#FFFFFF" stroke-width="1" opacity="0.2"/>
+  <line x1="840" y1="130" x2="840" y2="680" stroke="#FFFFFF" stroke-width="1" opacity="0.2"/>
+  <!-- Column 1: JOIN Selection -->
+  <circle cx="245" cy="155" r="22" fill="#2EAA5E"/>
+  <text x="245" y="161" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">→</text>
+  <text x="245" y="205" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">JOIN Selection Guide</text>
+  <text x="85" y="240" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.9">• Need only matched rows?</text>
+  <text x="100" y="258" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#5CDB8F">  → INNER JOIN</text>
+  <text x="85" y="285" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.9">• Keep all from left?</text>
+  <text x="100" y="303" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#5CDB8F">  → LEFT JOIN</text>
+  <text x="85" y="330" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.9">• Keep all from right?</text>
+  <text x="100" y="348" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#5CDB8F">  → RIGHT JOIN (or swap → LEFT)</text>
+  <text x="85" y="375" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.9">• Keep everything?</text>
+  <text x="100" y="393" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#5CDB8F">  → FULL OUTER JOIN</text>
+  <text x="85" y="420" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.9">• All combinations?</text>
+  <text x="100" y="438" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#5CDB8F">  → CROSS JOIN</text>
+  <text x="85" y="465" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.9">• Query same table?</text>
+  <text x="100" y="483" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#5CDB8F">  → Self-Join (LEFT + alias)</text>
+  <!-- Column 2: Syntax Skeleton -->
+  <circle cx="645" cy="155" r="22" fill="#2EAA5E"/>
+  <text x="645" y="161" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">&lt;/&gt;</text>
+  <text x="645" y="205" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Syntax Skeleton</text>
+  <rect x="468" y="220" width="360" height="175" rx="8" fill="#000000" opacity="0.3"/>
+  <text x="488" y="248" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#5CDB8F">SELECT</text>
+  <text x="556" y="248" font-family="Courier New, monospace" font-size="13" fill="#FFFFFF"> t1.col, t2.col</text>
+  <text x="488" y="270" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#5CDB8F">FROM</text>
+  <text x="536" y="270" font-family="Courier New, monospace" font-size="13" fill="#FFFFFF">   table1 AS t1</text>
+  <text x="488" y="292" font-family="Courier New, monospace" font-size="13" fill="#5CDB8F">[JOIN TYPE]</text>
+  <text x="600" y="292" font-family="Courier New, monospace" font-size="13" fill="#FFFFFF"> table2 AS t2</text>
+  <text x="488" y="314" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#5CDB8F">  ON</text>
+  <text x="518" y="314" font-family="Courier New, monospace" font-size="13" fill="#FFFFFF"> t1.key = t2.key;</text>
+  <text x="488" y="370" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.7">Use meaningful aliases (t → table initials)</text>
+  <text x="488" y="390" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.7">Always qualify column names: t1.col</text>
+  <!-- Column 3: Danger Checklist -->
+  <circle cx="1040" cy="155" r="22" fill="#2EAA5E"/>
+  <text x="1040" y="161" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">!</text>
+  <text x="1040" y="205" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Danger Checklist</text>
+  <text x="870" y="240" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.9">• Prefix all columns with alias</text>
+  <text x="870" y="270" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.9">• Check join key in ERD first</text>
+  <text x="870" y="300" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.9">• Move right-table filters to ON</text>
+  <text x="870" y="330" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.9">• Expect duplicates in 1-to-many</text>
+  <text x="870" y="360" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.9">• Test row count before/after</text>
+  <text x="870" y="390" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.9">• CROSS JOIN: watch row explosion</text>
+  <text x="870" y="420" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.9">• Self-Join: always use 2 aliases</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#FFFFFF" opacity="0.4">33</text>
+</svg>

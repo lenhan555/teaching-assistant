@@ -24,3 +24,9 @@
   Output:  agents/excel-scanner/AGENT.md, agents/excel-reconciler/AGENT.md, workflows/excel-grading-phase.md; updated agents/grading-agent/AGENT.md
   Status:  success
   Notes:   Two new agents (excel-scanner, excel-reconciler) added to grading pipeline. Grading agent extended with optional reconciliation_file input. Workflow trigger: /grade-excel-cohort <subject> <level> <cohort_id> <submissions_dir>
+
+[2026-05-29 00:00] agentic-team-build
+  Input:   System update — PPT Master pipeline integration
+  Output:  tools/svg_to_pptx/ (18 files), tools/svg_finalize/ (7 files), tools/svgs_to_pptx.py, tools/blueprint_to_svg_pptx.py; updated skills/slide-deck/SKILL.md
+  Status:  success
+  Notes:   PPT Master SVG-to-PPTX pipeline integrated. Step 4 of the slide-deck skill redesigned: Claude now writes SVGs directly to disk one at a time (PPT Master approach) instead of calling the Claude API in a subprocess. New tool tools/svgs_to_pptx.py is the post-generation converter (takes an svg_output/ dir, produces native DrawingML .pptx). Secondary route tools/blueprint_to_svg_pptx.py retained as API-based fallback. SVG output directory convention: slide_deck_template/decks/[topic-slug]/svg_output/. PPTX output: slide_deck_template/decks/[topic-slug]/[topic-slug].pptx. First production run: sql-intermediate-joins — 10/10 slides, 51 KB, 0 failures. Blueprint v2 standard established: exact column boundaries, z-order instructions, gradient stop coordinates, numbered build steps per slide.

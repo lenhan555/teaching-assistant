@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="15%" r="90%" fx="50%" fy="15%">
+      <stop offset="0%" stop-color="#5CDB8F"/>
+      <stop offset="100%" stop-color="#1A6B3A"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <!-- Atmosphere glow upper-center -->
+  <ellipse cx="640" cy="130" rx="260" ry="180" fill="#5CDB8F" opacity="0.20"/>
+  <!-- Decorative gem top-right -->
+  <ellipse cx="1188" cy="80" rx="36" ry="28" fill="#5CDB8F" opacity="0.35"/>
+  <ellipse cx="1188" cy="80" rx="22" ry="16" fill="#5CDB8F" opacity="0.5"/>
+
+  <!-- Headline centered -->
+  <text x="640" y="158" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF" text-anchor="middle">Learning Objectives</text>
+
+  <!-- Framing line centered -->
+  <text x="640" y="218" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#FFFFFF" opacity="0.75" text-anchor="middle">By the end of this session you will be able to:</text>
+
+  <!-- Soft glow radial line separator -->
+  <line x1="400" y1="238" x2="880" y2="238" stroke="#5CDB8F" stroke-width="1" opacity="0.3"/>
+
+  <!-- ── Objective row 1 (y=296) ── -->
+  <circle cx="384" cy="296" r="22" fill="#2EAA5E"/>
+  <!-- Check mark icon -->
+  <polyline points="373,296 381,304 396,284" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="418" y="291" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Choose the right JOIN type</text>
+  <text x="418" y="309" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" opacity="0.8">for any query requirement</text>
+
+  <!-- ── Objective row 2 (y=368) ── -->
+  <circle cx="384" cy="368" r="22" fill="#2EAA5E"/>
+  <polyline points="373,368 381,376 396,356" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="418" y="363" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Identify and fix the LEFT JOIN → INNER JOIN trap</text>
+  <text x="418" y="381" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" opacity="0.8">Catch the WHERE-clause filter conversion mistake</text>
+
+  <!-- ── Objective row 3 (y=440) ── -->
+  <circle cx="384" cy="440" r="22" fill="#2EAA5E"/>
+  <polyline points="373,440 381,448 396,428" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="418" y="435" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Rewrite correlated subqueries as performant JOINs</text>
+  <text x="418" y="453" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" opacity="0.8">NOT IN → LEFT JOIN + IS NULL; EXISTS → INNER JOIN</text>
+
+  <!-- ── Objective row 4 (y=512) ── -->
+  <circle cx="384" cy="512" r="22" fill="#2EAA5E"/>
+  <polyline points="373,512 381,520 396,500" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="418" y="507" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Read an EXPLAIN plan to diagnose a slow join</text>
+  <text x="418" y="525" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" opacity="0.8">Identify sequential scans vs index scans</text>
+
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, sans-serif" font-size="11" text-anchor="end" fill="#FFFFFF">3</text>
+</svg>

@@ -1,0 +1,1 @@
+../../skills/slide-deck/SKILL.md

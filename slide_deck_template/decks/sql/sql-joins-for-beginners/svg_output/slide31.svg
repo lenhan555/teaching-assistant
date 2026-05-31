@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1A6B3A"/>
+  <ellipse cx="640" cy="50" rx="400" ry="140" fill="#5CDB8F" opacity="0.12"/>
+  <text x="640" y="80" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">Putting It</text>
+  <text x="640" y="114" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="32" font-weight="700" fill="#5CDB8F" text-anchor="middle">All Together</text>
+  <text x="640" y="142" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.7" text-anchor="middle">Use the extended schema: Customers, Orders, Products, Employees</text>
+  <!-- 2x2 grid of exercise cards -->
+  <!-- Ex 7 -->
+  <rect x="60" y="158" width="560" height="220" rx="12" fill="#FFFFFF" opacity="0.18"/>
+  <rect x="60" y="158" width="560" height="36" rx="10" fill="#2EAA5E"/>
+  <rect x="60" y="176" width="560" height="18" fill="#2EAA5E"/>
+  <text x="340" y="182" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Exercise 7 — INNER JOIN × 2</text>
+  <text x="80" y="218" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">Return each customer's Name, the ProductName</text>
+  <text x="80" y="238" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">they ordered, and the Amount.</text>
+  <text x="80" y="258" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">Only include orders where both customer</text>
+  <text x="80" y="278" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">and product exist.</text>
+  <text x="80" y="306" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#5CDB8F">Hint: FROM Orders → INNER JOIN Customers → INNER JOIN Products</text>
+  <text x="80" y="324" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#5CDB8F">Expected: 3 rows</text>
+  <!-- Ex 8 -->
+  <rect x="660" y="158" width="560" height="220" rx="12" fill="#FFFFFF" opacity="0.18"/>
+  <rect x="660" y="158" width="560" height="36" rx="10" fill="#2EAA5E"/>
+  <rect x="660" y="176" width="560" height="18" fill="#2EAA5E"/>
+  <text x="940" y="182" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Exercise 8 — LEFT JOIN</text>
+  <text x="680" y="218" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">Modify Exercise 7 to also show customers</text>
+  <text x="680" y="238" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">who have no orders.</text>
+  <text x="680" y="258" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">What columns will be NULL for those</text>
+  <text x="680" y="278" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">customers?</text>
+  <text x="680" y="306" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#5CDB8F">Hint: Change first INNER JOIN to LEFT JOIN</text>
+  <text x="680" y="324" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#5CDB8F">ProductName and Amount = NULL for unmatched</text>
+  <!-- Ex 9 -->
+  <rect x="60" y="398" width="560" height="215" rx="12" fill="#FFFFFF" opacity="0.18"/>
+  <rect x="60" y="398" width="560" height="36" rx="10" fill="#5CDB8F" opacity="0.8"/>
+  <rect x="60" y="416" width="560" height="18" fill="#5CDB8F" opacity="0.8"/>
+  <text x="340" y="422" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A6B3A" text-anchor="middle">Exercise 9 — Self-Join Challenge</text>
+  <text x="80" y="458" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">List each employee and their manager.</text>
+  <text x="80" y="478" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">Show "No Manager" instead of NULL for Sara.</text>
+  <text x="80" y="498" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">Hint: Use COALESCE(m.Name, 'No Manager')</text>
+  <text x="80" y="526" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#5CDB8F">Expected: 4 rows, Sara shows 'No Manager'</text>
+  <!-- Ex 10 -->
+  <rect x="660" y="398" width="560" height="215" rx="12" fill="#FFFFFF" opacity="0.18"/>
+  <rect x="660" y="398" width="560" height="36" rx="10" fill="#E89C20" opacity="0.8"/>
+  <rect x="660" y="416" width="560" height="18" fill="#E89C20" opacity="0.8"/>
+  <text x="940" y="422" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Exercise 10 — GROUP BY + JOIN</text>
+  <text x="680" y="458" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">Show each customer's Name and total amount</text>
+  <text x="680" y="478" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">spent. Include customers with no orders (show 0).</text>
+  <text x="680" y="498" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">Hint: Use LEFT JOIN + COALESCE(SUM(Amount), 0)</text>
+  <text x="680" y="526" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#5CDB8F">Expected: 4 rows, Carol and Dan show 0</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#FFFFFF" opacity="0.4">31</text>
+</svg>

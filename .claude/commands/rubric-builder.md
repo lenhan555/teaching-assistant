@@ -1,0 +1,1 @@
+../../skills/rubric-builder/SKILL.md

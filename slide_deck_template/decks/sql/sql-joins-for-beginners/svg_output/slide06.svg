@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <!-- Left panel -->
+  <text x="60" y="110" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#1A1A2E">Our</text>
+  <text x="60" y="155" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#2EAA5E">Sample Data</text>
+  <line x1="60" y1="170" x2="420" y2="170" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="60" y="200" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">We will use these two tables for</text>
+  <text x="60" y="220" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">every example in this session.</text>
+  <text x="60" y="260" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#4A4A6A">Notice:</text>
+  <text x="60" y="285" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#4A4A6A">• Dan (ID=4) has no orders</text>
+  <text x="60" y="307" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#4A4A6A">• CustomerID=5 in Orders has</text>
+  <text x="60" y="327" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#4A4A6A">  no matching customer</text>
+  <text x="60" y="355" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#2EAA5E">These gaps are intentional —</text>
+  <text x="60" y="375" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#2EAA5E">they reveal how each JOIN type</text>
+  <text x="60" y="395" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#2EAA5E">handles missing data differently.</text>
+  <!-- Customers table -->
+  <text x="460" y="105" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">Customers</text>
+  <rect x="460" y="112" width="360" height="30" rx="4" fill="#2EAA5E"/>
+  <text x="475" y="132" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">CustomerID</text>
+  <text x="580" y="132" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">Name</text>
+  <text x="680" y="132" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">City</text>
+  <!-- rows -->
+  <rect x="460" y="142" width="360" height="26" fill="#FFFFFF"/>
+  <text x="475" y="160" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">1</text>
+  <text x="580" y="160" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Alice</text>
+  <text x="680" y="160" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">London</text>
+  <rect x="460" y="168" width="360" height="26" fill="#E8F8EE"/>
+  <text x="475" y="186" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">2</text>
+  <text x="580" y="186" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Bob</text>
+  <text x="680" y="186" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Paris</text>
+  <rect x="460" y="194" width="360" height="26" fill="#FFFFFF"/>
+  <text x="475" y="212" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">3</text>
+  <text x="580" y="212" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Carol</text>
+  <text x="680" y="212" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Berlin</text>
+  <rect x="460" y="220" width="360" height="26" fill="#E8F8EE"/>
+  <text x="475" y="238" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">4</text>
+  <text x="580" y="238" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Dan</text>
+  <text x="680" y="238" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Madrid</text>
+  <rect x="460" y="112" width="360" height="134" rx="4" fill="none" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Orders table -->
+  <text x="460" y="295" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">Orders</text>
+  <rect x="460" y="302" width="720" height="30" rx="4" fill="#2EAA5E"/>
+  <text x="475" y="322" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">OrderID</text>
+  <text x="570" y="322" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">CustomerID</text>
+  <text x="700" y="322" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">Product</text>
+  <text x="870" y="322" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">Amount</text>
+  <rect x="460" y="332" width="720" height="26" fill="#FFFFFF"/>
+  <text x="475" y="350" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">101</text>
+  <text x="570" y="350" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">1</text>
+  <text x="700" y="350" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Laptop</text>
+  <text x="870" y="350" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">1200</text>
+  <rect x="460" y="358" width="720" height="26" fill="#E8F8EE"/>
+  <text x="475" y="376" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">102</text>
+  <text x="570" y="376" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">2</text>
+  <text x="700" y="376" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Phone</text>
+  <text x="870" y="376" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">800</text>
+  <rect x="460" y="384" width="720" height="26" fill="#FFFFFF"/>
+  <text x="475" y="402" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">103</text>
+  <text x="570" y="402" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">1</text>
+  <text x="700" y="402" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Mouse</text>
+  <text x="870" y="402" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">25</text>
+  <!-- Special row OrderID 104 highlighted -->
+  <rect x="460" y="410" width="720" height="26" fill="#FFF8E8"/>
+  <text x="475" y="428" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">104</text>
+  <text x="570" y="428" font-family="Courier New, monospace" font-size="11" font-weight="700" fill="#CC3333">5</text>
+  <text x="700" y="428" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Keyboard</text>
+  <text x="870" y="428" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">75</text>
+  <rect x="460" y="302" width="720" height="134" rx="4" fill="none" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Annotation: no matching customer -->
+  <line x1="640" y1="423" x2="640" y2="470" stroke="#CC3333" stroke-width="1.5"/>
+  <rect x="550" y="470" width="220" height="36" rx="6" fill="#FFF0F0" stroke="#CC3333" stroke-width="1"/>
+  <text x="660" y="493" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#CC3333" text-anchor="middle">No matching customer!</text>
+  <!-- Annotation: Dan no orders -->
+  <line x1="820" y1="232" x2="900" y2="232" stroke="#CC3333" stroke-width="1.5"/>
+  <rect x="900" y="218" width="140" height="30" rx="6" fill="#FFF0F0" stroke="#CC3333" stroke-width="1"/>
+  <text x="970" y="238" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#CC3333" text-anchor="middle">No orders!</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">06</text>
+</svg>

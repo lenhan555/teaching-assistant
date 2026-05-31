@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1A6B3A"/>
+  <circle cx="640" cy="68" r="28" fill="#CC3333"/>
+  <text x="640" y="76" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">!</text>
+  <text x="640" y="122" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">Watch Out —</text>
+  <text x="640" y="156" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="26" font-weight="700" fill="#CC3333" text-anchor="middle">Unexpected Duplicate Rows</text>
+  <!-- Left code card -->
+  <rect x="60" y="180" width="540" height="280" rx="8" fill="#000000" opacity="0.25"/>
+  <text x="80" y="208" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Without GROUP BY:</text>
+  <text x="80" y="230" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">SELECT</text>
+  <text x="138" y="230" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF"> Customers.Name, Orders.Amount</text>
+  <text x="80" y="250" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">FROM</text>
+  <text x="124" y="250" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF">   Customers</text>
+  <text x="80" y="270" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">INNER JOIN</text>
+  <text x="170" y="270" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF"> Orders ON ...;</text>
+  <!-- Result showing Alice twice -->
+  <text x="80" y="310" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">Result:</text>
+  <text x="80" y="332" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF">Alice   1200</text>
+  <text x="80" y="352" font-family="Courier New, monospace" font-size="12" fill="#CC3333">Alice   25    ← same person, 2 rows!</text>
+  <text x="80" y="372" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF">Bob     800</text>
+  <text x="80" y="404" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#CC3333">Alice has 2 orders → appears 2 times</text>
+  <text x="80" y="422" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.8">This is CORRECT behavior — not a bug!</text>
+  <text x="80" y="440" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.8">But it surprises students expecting 1 row/customer</text>
+  <!-- Arrow "Fix" -->
+  <line x1="618" y1="340" x2="662" y2="340" stroke="#5CDB8F" stroke-width="2.5"/>
+  <polygon points="662,332 680,340 662,348" fill="#5CDB8F"/>
+  <text x="640" y="326" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#5CDB8F" text-anchor="middle">Fix</text>
+  <!-- Right code card: with GROUP BY -->
+  <rect x="680" y="180" width="540" height="280" rx="8" fill="#000000" opacity="0.25"/>
+  <text x="700" y="208" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#5CDB8F">With GROUP BY (collapse to 1 row/customer):</text>
+  <text x="700" y="230" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">SELECT</text>
+  <text x="758" y="230" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF"> Customers.Name,</text>
+  <text x="700" y="250" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF">       </text>
+  <text x="700" y="250" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">       SUM</text>
+  <text x="748" y="250" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF">(Orders.Amount) AS TotalSpent</text>
+  <text x="700" y="270" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">FROM</text>
+  <text x="744" y="270" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF">   Customers</text>
+  <text x="700" y="290" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">INNER JOIN</text>
+  <text x="790" y="290" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF"> Orders ON ...</text>
+  <text x="700" y="310" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">GROUP BY</text>
+  <text x="784" y="310" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF"> Customers.Name;</text>
+  <text x="700" y="352" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">Result:</text>
+  <text x="700" y="374" font-family="Courier New, monospace" font-size="12" fill="#5CDB8F">Alice   1225   ← 1200 + 25 summed!</text>
+  <text x="700" y="394" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF">Bob     800</text>
+  <text x="700" y="426" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#5CDB8F">Now one row per customer. Better!</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#FFFFFF" opacity="0.4">29</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <text x="60" y="105" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#1A1A2E">Session</text>
+  <text x="60" y="148" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#2EAA5E">Summary</text>
+  <line x1="60" y1="162" x2="400" y2="162" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="60" y="192" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">You now know all six JOIN types.</text>
+  <text x="60" y="215" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">Use this table as your reference sheet.</text>
+  <!-- Summary table -->
+  <rect x="440" y="75" width="800" height="34" rx="4" fill="#2EAA5E"/>
+  <text x="460" y="98" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">JOIN Type</text>
+  <text x="620" y="98" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">Returns</text>
+  <text x="960" y="98" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">NULL appears when...</text>
+  <!-- INNER -->
+  <rect x="440" y="109" width="800" height="52" fill="#EEF4FF"/>
+  <text x="460" y="130" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#1A1A2E">INNER JOIN</text>
+  <text x="620" y="130" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">Rows matched in BOTH tables</text>
+  <text x="960" y="130" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">Never — unmatched rows excluded</text>
+  <!-- LEFT -->
+  <rect x="440" y="161" width="800" height="52" fill="#E8F8EE"/>
+  <text x="460" y="182" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#1A1A2E">LEFT JOIN</text>
+  <text x="620" y="182" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">All left rows + matched right rows</text>
+  <text x="960" y="182" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">Right side has no match</text>
+  <!-- RIGHT -->
+  <rect x="440" y="213" width="800" height="52" fill="#FFFFF0"/>
+  <text x="460" y="234" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#1A1A2E">RIGHT JOIN</text>
+  <text x="620" y="234" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">All right rows + matched left rows</text>
+  <text x="960" y="234" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">Left side has no match</text>
+  <!-- FULL OUTER -->
+  <rect x="440" y="265" width="800" height="52" fill="#F5EEFF"/>
+  <text x="460" y="286" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#1A1A2E">FULL OUTER JOIN</text>
+  <text x="620" y="286" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">All rows from both tables</text>
+  <text x="960" y="286" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">Either side has no match</text>
+  <!-- CROSS -->
+  <rect x="440" y="317" width="800" height="52" fill="#FFF3EA"/>
+  <text x="460" y="338" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#1A1A2E">CROSS JOIN</text>
+  <text x="620" y="338" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">Every combination (no ON clause)</text>
+  <text x="960" y="338" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">Never — all combinations included</text>
+  <!-- SELF -->
+  <rect x="440" y="369" width="800" height="52" fill="#F4F4F8"/>
+  <text x="460" y="390" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#1A1A2E">Self-Join</text>
+  <text x="620" y="390" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">Table joined to itself (any JOIN type)</text>
+  <text x="960" y="390" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">Depends on JOIN type used</text>
+  <!-- Border and dividers -->
+  <rect x="440" y="75" width="800" height="346" rx="4" fill="none" stroke="#2EAA5E" stroke-width="1.5"/>
+  <line x1="610" y1="75" x2="610" y2="421" stroke="#2EAA5E" stroke-width="1" opacity="0.3"/>
+  <line x1="950" y1="75" x2="950" y2="421" stroke="#2EAA5E" stroke-width="1" opacity="0.3"/>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">32</text>
+</svg>

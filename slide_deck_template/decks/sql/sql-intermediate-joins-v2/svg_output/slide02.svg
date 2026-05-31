@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <!-- White background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <!-- Left column headline: "Session" near-black + "Agenda" green-mid -->
+  <text x="60" y="138" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#1A1A2E">Session </text>
+  <text x="226" y="138" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#2EAA5E">Agenda</text>
+  <!-- Divider line below headline -->
+  <line x1="60" y1="152" x2="500" y2="152" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Framing text -->
+  <text x="60" y="175" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">What we cover today</text>
+
+  <!-- ── Row 1: JOIN Types (y-center=212) ── -->
+  <circle cx="562" cy="212" r="22" fill="#2EAA5E"/>
+  <!-- Book icon: two small rects -->
+  <rect x="551" y="202" width="9" height="20" rx="1" fill="#FFFFFF"/>
+  <rect x="562" y="202" width="9" height="20" rx="1" fill="#FFFFFF"/>
+  <line x1="562" y1="203" x2="562" y2="221" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="596" y="208" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="600" fill="#1A1A2E">JOIN Types</text>
+  <text x="596" y="226" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">INNER · LEFT · RIGHT · FULL OUTER · CROSS · SELF</text>
+
+  <!-- ── Row 2: Correlated Subqueries (y-center=284) ── -->
+  <circle cx="562" cy="284" r="22" fill="#2EAA5E"/>
+  <!-- Arrows left-right icon -->
+  <polyline points="550,284 574,284" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  <polyline points="554,280 550,284 554,288" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  <polyline points="570,280 574,284 570,288" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  <text x="596" y="280" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="600" fill="#1A1A2E">Correlated Subqueries vs JOINs</text>
+  <text x="596" y="298" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">Rewrite slow subqueries as performant JOINs</text>
+
+  <!-- ── Row 3: Performance (y-center=356) ── -->
+  <circle cx="562" cy="356" r="22" fill="#2EAA5E"/>
+  <!-- Lightning bolt icon -->
+  <polygon points="567,337 558,356 564,356 559,375 571,352 565,352" fill="#FFFFFF"/>
+  <text x="596" y="352" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="600" fill="#1A1A2E">Performance</text>
+  <text x="596" y="370" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">Indexes, EXPLAIN, sargable conditions</text>
+
+  <!-- ── Row 4: In-Class Practice (y-center=428) ── -->
+  <circle cx="562" cy="428" r="22" fill="#2EAA5E"/>
+  <!-- Pencil icon -->
+  <rect x="552" y="418" width="6" height="14" rx="1" fill="#FFFFFF" transform="rotate(-30 555 425)"/>
+  <polygon points="550,436 554,440 558,432" fill="#FFFFFF"/>
+  <text x="596" y="424" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="600" fill="#1A1A2E">In-Class Practice</text>
+  <text x="596" y="442" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">3 progressively harder queries</text>
+
+  <!-- ── Row 5: Summary and Next Steps (y-center=500) ── -->
+  <circle cx="562" cy="500" r="22" fill="#2EAA5E"/>
+  <!-- Flag icon -->
+  <rect x="555" y="488" width="2" height="24" fill="#FFFFFF"/>
+  <polygon points="557,489 569,494 557,499" fill="#FFFFFF"/>
+  <text x="596" y="496" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="600" fill="#1A1A2E">Summary and Next Steps</text>
+  <text x="596" y="514" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">Key takeaways and take-home exercises</text>
+
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, sans-serif" font-size="11" text-anchor="end" fill="#4A4A6A">2</text>
+</svg>

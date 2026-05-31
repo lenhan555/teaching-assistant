@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <text x="60" y="100" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#1A1A2E">In-Class</text>
+  <text x="60" y="138" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="26" font-weight="700" fill="#2EAA5E">Practice: CROSS JOIN &amp; Self-Join</text>
+  <line x1="60" y1="152" x2="440" y2="152" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="60" y="182" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">Work through each exercise. Check your results with your neighbor.</text>
+  <!-- Exercise 5 -->
+  <rect x="460" y="90" width="750" height="145" rx="8" fill="#F4F4F8"/>
+  <rect x="460" y="90" width="5" height="145" rx="4" fill="#2EAA5E"/>
+  <text x="480" y="118" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Exercise 5 — CROSS JOIN</text>
+  <text x="480" y="143" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Using Customers (4 rows) and a Colors table (Red, Blue, Green),</text>
+  <text x="480" y="163" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">write a CROSS JOIN query. How many rows will the result have?</text>
+  <text x="480" y="183" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Write the query and verify.</text>
+  <text x="480" y="210" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#2EAA5E">Expected: 4 × 3 = 12 rows</text>
+  <!-- Exercise 6 -->
+  <rect x="460" y="255" width="750" height="165" rx="8" fill="#F4F4F8"/>
+  <rect x="460" y="255" width="5" height="165" rx="4" fill="#2EAA5E"/>
+  <text x="480" y="283" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Exercise 6 — Self-Join</text>
+  <text x="480" y="308" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Using the Employees table, write a query that lists every</text>
+  <text x="480" y="328" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">employee alongside their manager's name.</text>
+  <text x="480" y="348" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Employees with no manager (Sara) should appear with NULL.</text>
+  <text x="480" y="368" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Hint: Use aliases e and m. Use LEFT JOIN.</text>
+  <text x="480" y="400" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#2EAA5E">Expected: 4 rows (Sara with NULL Manager)</text>
+  <!-- Reflection card (amber) -->
+  <rect x="460" y="440" width="750" height="160" rx="8" fill="#FFF8E8"/>
+  <rect x="460" y="440" width="5" height="160" rx="4" fill="#E89C20"/>
+  <text x="480" y="468" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Think &amp; Discuss</text>
+  <text x="480" y="494" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Why do we need two aliases (e and m) in a self-join?</text>
+  <text x="480" y="514" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">What would happen if we wrote:</text>
+  <text x="480" y="534" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E">FROM Employees JOIN Employees ON …</text>
+  <text x="480" y="556" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">without aliases?</text>
+  <text x="480" y="578" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#E89C20">Answer: SQL would throw an ambiguity error — it needs distinct names</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">24</text>
+</svg>

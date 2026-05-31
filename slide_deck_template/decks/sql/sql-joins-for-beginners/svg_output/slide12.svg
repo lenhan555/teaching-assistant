@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <text x="60" y="110" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="30" font-weight="700" fill="#1A1A2E">RIGHT JOIN —</text>
+  <text x="60" y="150" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="30" font-weight="700" fill="#2EAA5E">The Mirror Image</text>
+  <line x1="60" y1="165" x2="500" y2="165" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="60" y="200" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">• Returns ALL rows from the right table</text>
+  <text x="60" y="224" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">• Symmetric to LEFT JOIN</text>
+  <text x="60" y="248" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">• No match on left → left columns = NULL</text>
+  <text x="60" y="280" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">Tip:</text>
+  <text x="60" y="304" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">Most developers rewrite RIGHT JOIN as</text>
+  <text x="60" y="328" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">LEFT JOIN by swapping table order.</text>
+  <text x="60" y="352" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">Same result — easier to read.</text>
+  <rect x="60" y="378" width="440" height="50" rx="8" fill="#FFF8E8" stroke="#E89C20" stroke-width="1"/>
+  <text x="80" y="400" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#1A1A2E">Note: SQLite does not support RIGHT JOIN</text>
+  <!-- Two equivalent queries -->
+  <text x="560" y="110" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#4A4A6A">These two queries return identical results:</text>
+  <rect x="560" y="120" width="300" height="150" rx="8" fill="#F4F4F8"/>
+  <text x="580" y="148" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#4A4A6A">Using RIGHT JOIN</text>
+  <text x="580" y="172" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E">SELECT *</text>
+  <text x="580" y="192" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E">FROM Customers</text>
+  <text x="580" y="212" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">RIGHT JOIN</text>
+  <text x="580" y="232" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E"> Orders ON …</text>
+  <text x="886" y="200" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#2EAA5E" text-anchor="middle">=</text>
+  <rect x="920" y="120" width="300" height="150" rx="8" fill="#F4F4F8"/>
+  <text x="940" y="148" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#2EAA5E">Using LEFT JOIN (preferred)</text>
+  <text x="940" y="172" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E">SELECT *</text>
+  <text x="940" y="192" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E">FROM Orders</text>
+  <text x="940" y="212" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">LEFT JOIN</text>
+  <text x="940" y="232" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E"> Customers ON …</text>
+  <!-- Venn: right filled, no clipPath -->
+  <!-- Left circle outline -->
+  <circle cx="720" cy="460" r="70" fill="none" stroke="#2EAA5E" stroke-width="2"/>
+  <!-- Overlap approximation -->
+  <ellipse cx="760" cy="460" rx="28" ry="62" fill="#5CDB8F" opacity="0.4"/>
+  <!-- Right circle filled -->
+  <circle cx="800" cy="460" r="70" fill="#2EAA5E" opacity="0.7"/>
+  <text x="700" y="465" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A" text-anchor="middle">Left</text>
+  <text x="820" y="465" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Right</text>
+  <text x="760" y="555" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A" text-anchor="middle">Right circle fully preserved</text>
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">12</text>
+</svg>

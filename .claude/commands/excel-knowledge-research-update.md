@@ -1,0 +1,1 @@
+../../skills/excel-knowledge-research-update/SKILL.md

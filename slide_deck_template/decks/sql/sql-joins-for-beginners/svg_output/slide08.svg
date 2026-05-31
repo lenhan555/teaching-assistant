@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <!-- Left panel -->
+  <text x="60" y="110" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="30" font-weight="700" fill="#1A1A2E">INNER JOIN —</text>
+  <text x="60" y="150" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="30" font-weight="700" fill="#2EAA5E">Worked Example</text>
+  <line x1="60" y1="165" x2="560" y2="165" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Code block -->
+  <rect x="60" y="180" width="520" height="180" rx="8" fill="#F4F4F8"/>
+  <text x="80" y="210" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#2EAA5E">SELECT</text>
+  <text x="155" y="210" font-family="Courier New, monospace" font-size="13" fill="#1A1A2E"> Customers.Name, Orders.Product,</text>
+  <text x="80" y="230" font-family="Courier New, monospace" font-size="13" fill="#1A1A2E">       Orders.Amount</text>
+  <text x="80" y="255" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#2EAA5E">FROM</text>
+  <text x="130" y="255" font-family="Courier New, monospace" font-size="13" fill="#1A1A2E">   Customers</text>
+  <text x="80" y="278" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#2EAA5E">INNER JOIN</text>
+  <text x="182" y="278" font-family="Courier New, monospace" font-size="13" fill="#1A1A2E"> Orders</text>
+  <text x="80" y="300" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#2EAA5E">  ON</text>
+  <text x="110" y="300" font-family="Courier New, monospace" font-size="13" fill="#1A1A2E"> Customers.CustomerID = Orders.CustomerID;</text>
+  <text x="80" y="340" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">What happened:</text>
+  <text x="80" y="365" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">• Carol (no orders) → excluded</text>
+  <text x="80" y="385" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">• Dan (no orders) → excluded</text>
+  <text x="80" y="405" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">• OrderID 104 (CustomerID=5) → excluded</text>
+  <text x="80" y="425" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">• Only Alice &amp; Bob have matches in BOTH tables</text>
+  <!-- Right panel: result table -->
+  <text x="620" y="110" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Result:</text>
+  <rect x="620" y="120" width="600" height="30" rx="4" fill="#2EAA5E"/>
+  <text x="640" y="140" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Name</text>
+  <text x="780" y="140" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Product</text>
+  <text x="960" y="140" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Amount</text>
+  <rect x="620" y="150" width="600" height="30" fill="#FFFFFF"/>
+  <text x="640" y="170" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Alice</text>
+  <text x="780" y="170" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Laptop</text>
+  <text x="960" y="170" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">1200</text>
+  <rect x="620" y="180" width="600" height="30" fill="#E8F8EE"/>
+  <text x="640" y="200" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Bob</text>
+  <text x="780" y="200" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Phone</text>
+  <text x="960" y="200" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">800</text>
+  <rect x="620" y="210" width="600" height="30" fill="#FFFFFF"/>
+  <text x="640" y="230" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Alice</text>
+  <text x="780" y="230" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Mouse</text>
+  <text x="960" y="230" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">25</text>
+  <rect x="620" y="120" width="600" height="120" rx="4" fill="none" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Excluded rows shown with strikethrough style -->
+  <text x="620" y="290" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#CC3333">Excluded (no match in both tables):</text>
+  <!-- Carol row -->
+  <rect x="620" y="300" width="600" height="28" fill="#FFF0F0"/>
+  <text x="640" y="319" font-family="Courier New, monospace" font-size="12" fill="#CC3333" opacity="0.7">Carol</text>
+  <text x="780" y="319" font-family="Courier New, monospace" font-size="12" fill="#CC3333" opacity="0.7">—</text>
+  <text x="960" y="319" font-family="Courier New, monospace" font-size="12" fill="#CC3333" opacity="0.7">—</text>
+  <line x1="635" y1="315" x2="750" y2="315" stroke="#CC3333" stroke-width="1.5"/>
+  <!-- Dan row -->
+  <rect x="620" y="328" width="600" height="28" fill="#FFF0F0"/>
+  <text x="640" y="347" font-family="Courier New, monospace" font-size="12" fill="#CC3333" opacity="0.7">Dan</text>
+  <text x="780" y="347" font-family="Courier New, monospace" font-size="12" fill="#CC3333" opacity="0.7">—</text>
+  <text x="960" y="347" font-family="Courier New, monospace" font-size="12" fill="#CC3333" opacity="0.7">—</text>
+  <line x1="635" y1="343" x2="740" y2="343" stroke="#CC3333" stroke-width="1.5"/>
+  <!-- CustomerID=5 row -->
+  <rect x="620" y="356" width="600" height="28" fill="#FFF0F0"/>
+  <text x="640" y="375" font-family="Courier New, monospace" font-size="12" fill="#CC3333" opacity="0.7">—</text>
+  <text x="780" y="375" font-family="Courier New, monospace" font-size="12" fill="#CC3333" opacity="0.7">Keyboard</text>
+  <text x="960" y="375" font-family="Courier New, monospace" font-size="12" fill="#CC3333" opacity="0.7">75</text>
+  <line x1="635" y1="371" x2="1200" y2="371" stroke="#CC3333" stroke-width="1.5"/>
+  <!-- Key takeaway -->
+  <rect x="620" y="420" width="600" height="60" rx="8" fill="#E8F8EE" stroke="#2EAA5E" stroke-width="1"/>
+  <text x="640" y="448" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">INNER JOIN = only rows with a match on BOTH sides</text>
+  <text x="640" y="468" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#4A4A6A">No match → row disappears completely</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">08</text>
+</svg>

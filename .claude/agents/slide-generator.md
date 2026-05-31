@@ -18,7 +18,7 @@ Produce a per-slide PowerPoint blueprint following the project design system. Do
 - `topic`: e.g. SQL Joins for Beginners
 - `audience`: students / investors / executives / clients / general
 - `style`: training / pitch / report
-- `slides`: target slide count, 5–20 (default 10)
+- `slides`: target slide count — use as a minimum, not a ceiling. For training style, generate as many slides as needed to cover the topic completely. Never truncate or compress content to hit a slide count. Default: however many slides the topic requires.
 - `knowledge_doc` (optional): path to `skills/[subject]-[level]-[topic-slug].md`
 - `--save` flag (optional): write output file if present
 
@@ -33,8 +33,22 @@ Per-slide spec format:
 - **Headline:** "[neutral word(s)]" + "[accent word(s) in green-mid]"
 - **Content:** [bullet points, stats, or body text]
 - **Visual spec:** [icon description, chart type, image guidance]
+- **Image query:** [2–5 word search phrase for a real photo/diagram that fits this slide, or "none" if no image needed]
+- **Image style:** [photo / diagram / screenshot / none]
 - **PPT build notes:** [specific PowerPoint instructions]
 ```
+
+After writing all slides, append an image manifest block at the end of the blueprint:
+```
+## Image Manifest
+```json
+[
+  {"slide_id": "slide01", "query": "[image query]", "style_hint": "[image style]"},
+  ...
+]
+```
+```
+Only include slides where Image style is not "none".
 
 Final line must be:
 ```
@@ -42,7 +56,7 @@ output_path: slide_deck_template/decks/[topic-slug].md
 ```
 
 ## Design Rules (Non-Negotiable)
-Always read `slide_deck_template/deck-analysis.md` first for the full design system. Key rules:
+Always read `slide_deck_template/examples/deck-analysis.md` and `slide_deck_template/examples/svg-design-system.md` first for the full design system. Key rules:
 
 1. **Two-tone headline:** every title on white = one neutral word (near-black `#1A1A2E`) + one accent word (green-mid `#2EAA5E`). Same font, same weight — color only.
 2. **Background alternation:** dark-green and white must alternate. Never more than 2 consecutive slides in the same mode.
@@ -59,6 +73,18 @@ Always read `slide_deck_template/deck-analysis.md` first for the full design sys
 ## Content Strategy
 If `knowledge_doc` is provided: read it and base slide content on it.
 If not: use WebSearch/WebFetch to research the topic before generating slides.
+
+### Teaching-First Principles
+This system is built for a training center. Every deck must be designed for a student sitting in class, not a reader skimming a report. Apply these principles to every training-style deck:
+
+- **Complete coverage** — every concept in the knowledge doc (or research) must appear on at least one slide. Do not skip subtopics to shorten the deck.
+- **One concept per slide, fully explained** — each slide should be self-contained. A student who missed the previous slide should be able to follow from this one.
+- **Worked examples are mandatory** — any concept slide involving syntax, formulas, or logic must be followed by a concrete worked example slide showing the concept applied to real data.
+- **Scaffold complexity** — order slides from simplest to most complex within each section. Never introduce a term before it has been defined.
+- **Practice prompts** — include at least one in-class exercise slide per major section (not just at the end of the deck).
+- **Callout slides for common mistakes** — wherever students commonly trip up, add a dedicated "Watch out" or "Common mistake" slide.
+- **Visual over text** — prefer tables, diagrams, before/after comparisons, and annotated code snippets over bullet lists. Text-only slides are a last resort.
+- **Summary slide per section** — for decks longer than 10 slides, end each logical section with a one-slide recap before moving to the next topic.
 
 ## Logging
 Append to `log/slide-generator.log`:

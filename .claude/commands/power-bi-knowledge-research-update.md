@@ -1,0 +1,1 @@
+../../skills/power-bi-knowledge-research-update/SKILL.md

@@ -1,0 +1,23 @@
+[2026-05-25 00:00] slide-generator
+  Input:   topic=SQL Joins style=training audience=students (intermediate) slides=10
+  Output:  slide_deck_template/decks/sql-intermediate-joins.md
+  Status:  success
+  Notes:   Knowledge doc used: skills/sql-intermediate-joins.md. Layout patterns used: A (cover), B (agenda, core JOINs, performance, summary), C (CROSS/SELF JOINs), F (objectives, outer JOINs, practice), G (subqueries vs JOINs). Background strictly alternates dark-green/white across all 10 slides. All 6 JOIN types covered (INNER, LEFT, RIGHT, FULL OUTER, CROSS, SELF), plus correlated subquery rewrites and performance tips. Training structure: Cover → Agenda → Objectives → Core JOINs → Outer JOINs → Special JOINs → Subquery Rewrites → Performance → Practice → Summary.
+
+[2026-05-29 10:00] slide-generator
+  Input:   slide_deck_template/examples/ (sql-intermediate-joins.svg_pptx.pptx + deck-analysis.md)
+  Output:  slide_deck_template/decks/sql-intermediate-joins-v2.md
+  Status:  success
+  Notes:   Enriched rebuild of sql-intermediate-joins.md. Design system read from slide_deck_template/examples/deck-analysis.md (full design reference). Existing blueprint at decks/sql-intermediate-joins.md used as v1 baseline. v2 improvements: (1) exact column boundary percentages on all Pattern B slides; (2) z-order and layering instructions for all slides; (3) radial gradient stop positions and center-handle coordinates specified; (4) code block monospace font (Courier New), background color (#F4F4F8 on white / transparent-white on dark), and padding values added; (5) left-edge green-mid accent bar added to Slide 8 sargable callout per design system Section 4.6; (6) icon badge sizing hierarchy established (44pt body / 40pt six-row summary / 32pt callout interior); (7) numbered step-by-step PPT build instructions on every slide; (8) soft-light atmosphere circles given distinct X/Y positions per dark slide for visual variation. Layout patterns: A (1), B (2, 4, 8, 10), C (6), F (3, 5, 9), G (7). Background alternates strictly dark/white across all 10 slides. No web research needed — all content derived from existing v1 blueprint and design system doc.
+
+[2026-05-29 00:00] slide-generator — PIPELINE UPDATE
+  Input:   skills/slide-deck/SKILL.md Step 4 redesigned
+  Output:  slide_deck_template/decks/sql-intermediate-joins/svg_output/ (10 SVGs), slide_deck_template/decks/sql-intermediate-joins/sql-intermediate-joins.pptx
+  Status:  success
+  Notes:   Pipeline now follows PPT Master exactly: Claude writes each SVG directly using the Write tool (one file at a time, sequentially) — no Claude API subprocess. Design system embedded in SKILL.md Step 4 so the executing instance has colors, typography, and layout patterns A–G available without reading a separate file. Post-generation: python3 tools/svgs_to_pptx.py converts svg_output/ dir to native DrawingML PPTX (no API key required). First run on sql-intermediate-joins.md: 10 slides written directly, converted via PPT Master native shapes route — 10/10 succeeded, 0 failures, 51 KB output. Blueprint v2 standard (sql-intermediate-joins-v2.md) introduces: exact column boundaries, z-order layering, gradient stop coordinates, numbered build steps, code block specs, accent bar callouts, badge size hierarchy, per-slide atmosphere circle positions.
+
+[2026-05-31 12:00] slide-generator
+  Input:   topic=SQL Joins for Beginners style=training audience=students slides=topic-driven (no ceiling)
+  Output:  slide_deck_template/decks/sql/sql-joins-for-beginners.md
+  Status:  success
+  Notes:   No knowledge doc provided — web research conducted via WebSearch + WebFetch (W3Schools, DbSchema, GeeksforGeeks). 34 slides generated covering: INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, Self-Join, multiple JOINs, 4 common-mistake callout slides, 5 in-class practice slides, section summaries, best practices, quick reference card, next steps. Layout patterns used: A (slide 1), B (slides 2, 6, 8, 12, 14, 16, 18, 22, 24, 26, 28, 30, 32, 34), C (slide 33), F (slides 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31), G (slides 10, 19). Background alternates strictly dark-green/white throughout — never more than 2 consecutive same-mode slides. Image manifest: 10 slides with image queries (9 diagrams, 1 photo). Teaching-first principles applied: worked example after every concept slide, practice slides per section, common-mistake callout slides (slides 13, 27, 28, 29), section summaries (slides 14, 23, 32), one concept per slide.

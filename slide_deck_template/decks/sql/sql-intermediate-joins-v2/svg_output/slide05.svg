@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="15%" r="90%" fx="50%" fy="15%">
+      <stop offset="0%" stop-color="#5CDB8F"/>
+      <stop offset="100%" stop-color="#1A6B3A"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <!-- Atmosphere glow upper-right -->
+  <ellipse cx="921" cy="101" rx="220" ry="160" fill="#5CDB8F" opacity="0.18"/>
+  <!-- Decorative gem bottom-right -->
+  <ellipse cx="1200" cy="640" rx="32" ry="24" fill="#5CDB8F" opacity="0.35"/>
+  <ellipse cx="1200" cy="640" rx="18" ry="14" fill="#5CDB8F" opacity="0.5"/>
+
+  <!-- Headline centered at top -->
+  <text x="640" y="118" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF" text-anchor="middle">Outer JOINs</text>
+
+  <!-- Vertical center divider: from y=145 to y=570, at x=640 -->
+  <line x1="640" y1="145" x2="640" y2="570" stroke="#2EAA5E" stroke-width="1.5"/>
+
+  <!-- ── LEFT ZONE: RIGHT JOIN (x=60–610) ── -->
+  <text x="60" y="178" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">RIGHT JOIN</text>
+  <text x="60" y="202" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" opacity="0.8">Mirror of LEFT JOIN. All right-table rows</text>
+  <text x="60" y="218" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" opacity="0.8">retained; NULLs fill unmatched left side.</text>
+  <text x="60" y="246" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" opacity="0.8">Almost always rewritable as a LEFT JOIN</text>
+  <text x="60" y="262" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" opacity="0.8">with swapped table order.</text>
+  <text x="60" y="290" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="400" fill="#FFFFFF" opacity="0.7" font-style="italic">Avoid mixing LEFT and RIGHT JOIN</text>
+  <text x="60" y="304" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="400" fill="#FFFFFF" opacity="0.7" font-style="italic">in the same query — hard to read.</text>
+  <!-- Code card LEFT -->
+  <rect x="60" y="324" width="550" height="54" rx="8" fill="#FFFFFF" fill-opacity="0.12" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="76" y="345" font-family="Courier New, monospace" font-size="10" fill="#FFFFFF">SELECT * FROM orders o</text>
+  <text x="76" y="361" font-family="Courier New, monospace" font-size="10" fill="#FFFFFF">RIGHT JOIN customers c ON o.customer_id = c.id;</text>
+
+  <!-- ── RIGHT ZONE: FULL OUTER JOIN (x=660–1220) ── -->
+  <text x="660" y="178" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">FULL OUTER JOIN</text>
+  <text x="660" y="202" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" opacity="0.8">Every row from both tables. Unmatched</text>
+  <text x="660" y="218" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" opacity="0.8">sides get NULL on the other column set.</text>
+  <text x="660" y="246" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" opacity="0.8">The reconciliation tool: which records exist</text>
+  <text x="660" y="262" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" opacity="0.8">in one dataset but not the other?</text>
+  <text x="660" y="290" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="400" fill="#FFFFFF" opacity="0.7" font-style="italic">MySQL: UNION of LEFT JOIN + RIGHT JOIN</text>
+  <text x="660" y="304" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="400" fill="#FFFFFF" opacity="0.7" font-style="italic">(no native FULL OUTER JOIN support).</text>
+  <!-- Code card RIGHT -->
+  <rect x="660" y="324" width="540" height="54" rx="8" fill="#FFFFFF" fill-opacity="0.12" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="676" y="345" font-family="Courier New, monospace" font-size="10" fill="#FFFFFF">SELECT * FROM a</text>
+  <text x="676" y="361" font-family="Courier New, monospace" font-size="10" fill="#FFFFFF">FULL OUTER JOIN b ON a.id = b.id;</text>
+
+  <!-- ── Bottom frosted callout card ── -->
+  <rect x="60" y="408" width="1160" height="152" rx="12" fill="#FFFFFF" fill-opacity="0.18" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="80" y="432" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="600" fill="#5CDB8F">Isolate exclusive rows with WHERE IS NULL:</text>
+  <rect x="80" y="444" width="1120" height="104" rx="6" fill="#FFFFFF" fill-opacity="0.08"/>
+  <text x="96" y="466" font-family="Courier New, monospace" font-size="10" fill="#FFFFFF">SELECT * FROM a FULL OUTER JOIN b ON a.id = b.id</text>
+  <text x="96" y="482" font-family="Courier New, monospace" font-size="10" fill="#FFFFFF">WHERE a.id IS NULL OR b.id IS NULL;</text>
+  <text x="80" y="530" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="400" fill="#FFFFFF" opacity="0.75">This pattern isolates rows that exist in one table but not the other — the foundation of data reconciliation queries.</text>
+
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, sans-serif" font-size="11" text-anchor="end" fill="#FFFFFF">5</text>
+</svg>

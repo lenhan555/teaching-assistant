@@ -1,0 +1,1 @@
+../../skills/sql-knowledge-research-update/SKILL.md

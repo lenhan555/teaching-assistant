@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <text x="60" y="100" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#1A1A2E">In-Class</text>
+  <text x="60" y="138" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="26" font-weight="700" fill="#2EAA5E">Practice: LEFT &amp; FULL OUTER JOIN</text>
+  <line x1="60" y1="152" x2="440" y2="152" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="60" y="182" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">Work through these exercises in your SQL</text>
+  <text x="60" y="204" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">editor. Raise your hand when done with Ex 3.</text>
+  <!-- Exercise 3 card -->
+  <rect x="460" y="90" width="750" height="140" rx="8" fill="#F4F4F8"/>
+  <rect x="460" y="90" width="5" height="140" rx="4" fill="#2EAA5E"/>
+  <text x="480" y="118" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Exercise 3 — LEFT JOIN</text>
+  <text x="480" y="143" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">List ALL customers, including those who have never</text>
+  <text x="480" y="163" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">placed an order. Show Name and Amount. Customers</text>
+  <text x="480" y="183" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">with no orders should show NULL in Amount.</text>
+  <text x="480" y="210" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#2EAA5E">Expected: 5 rows (Carol and Dan with NULL)</text>
+  <!-- Exercise 4 card -->
+  <rect x="460" y="250" width="750" height="145" rx="8" fill="#F4F4F8"/>
+  <rect x="460" y="250" width="5" height="145" rx="4" fill="#2EAA5E"/>
+  <text x="480" y="278" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Exercise 4 — FULL OUTER JOIN</text>
+  <text x="480" y="303" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Extend Exercise 3 to also show orders that have</text>
+  <text x="480" y="323" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">no matching customer (CustomerID=5).</text>
+  <text x="480" y="343" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">What do you expect in the Name column for that row?</text>
+  <text x="480" y="370" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#2EAA5E">Expected: 6 rows including the NULL Name row</text>
+  <!-- Bonus card -->
+  <rect x="460" y="415" width="750" height="130" rx="8" fill="#FFF8E8"/>
+  <rect x="460" y="415" width="5" height="130" rx="4" fill="#E89C20"/>
+  <text x="480" y="443" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E">Bonus — UNION Workaround</text>
+  <text x="480" y="468" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">How would you rewrite Exercise 4 using UNION</text>
+  <text x="480" y="488" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">if your database does not support FULL OUTER JOIN?</text>
+  <text x="480" y="508" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Hint: LEFT JOIN UNION RIGHT JOIN</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">18</text>
+</svg>

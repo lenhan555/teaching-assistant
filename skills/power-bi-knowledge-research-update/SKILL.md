@@ -1,3 +1,11 @@
+---
+name: power-bi-knowledge-research-update
+description: Research Power BI and DAX concepts at a specified skill level and optionally write or merge findings into the project's knowledge docs in skills/.
+arguments: "[level] [topic] [--update]"
+outputs:
+  - skills/powerbi-[level]-[topic-slug].md
+---
+
 # Skill: power-bi-knowledge-research-update
 
 ## Usage
@@ -11,126 +19,65 @@
 | Argument | Required | Values | Default |
 |----------|----------|--------|---------|
 | `level` | no | `beginner` / `intermediate` / `advanced` / `all` | `all` |
-| `topic` | no | e.g. `measures`, `relationships`, `CALCULATE` | `general` |
-| `--update` | no | flag | off (print only) |
+| `topic` | no | e.g. `dax calculate`, `data modeling`, `report design` | `general` |
+| `--update` | no | flag — writes synthesized doc to `skills/` | off (print only) |
 
 ## Examples
 
 ```
-/power-bi-knowledge-research-update beginner measures --update
-/power-bi-knowledge-research-update intermediate CALCULATE
-/power-bi-knowledge-research-update all relationships --update
+/power-bi-knowledge-research-update beginner report design --update
+/power-bi-knowledge-research-update intermediate dax calculate
+/power-bi-knowledge-research-update all data modeling --update
 ```
 
 ---
 
 ## Execution Steps
 
-### Step 1 — Parse invocation
+### Step 1 — Parse arguments
 
-Extract `level`, `topic`, and `--update` flag. Normalize `topic` to a slug. Default `level` to `all` and `topic` to `general` if omitted.
-
----
-
-### Step 2 — Check existing content
-
-Read any existing file at `skills/powerbi-[level]-[topic-slug].md`. Note covered concepts to avoid duplication.
+Extract `level`, `topic`, and `--update` flag. Normalize `topic` to a slug (lowercase, spaces → hyphens). Default `level` to `all`, `topic` to `general` if omitted.
 
 ---
 
-### Step 3 — Web research
+### Step 2 — Spawn Researcher agent
 
-Search for authoritative Power BI content using the query templates below. Fetch at least 3 sources per level included.
-
-**Query templates:**
-- `Power BI [topic] [level] tutorial 2024 2025`
-- `DAX [topic] examples explained`
-- `Power BI [topic] best practices`
-- `site:learn.microsoft.com power-bi [topic]`
-- `site:dax.guide [topic]`
-- `site:sqlbi.com [topic]`
-
-**Preferred sources (in priority order):**
-1. learn.microsoft.com/power-bi — official Microsoft documentation
-2. dax.guide — authoritative DAX function reference
-3. sqlbi.com — advanced DAX patterns and data modeling
-4. youtube.com/guyinacube — practical tutorials (summarize — do not embed video)
-5. Recent articles (≤ 2 years) from reputable Power BI community blogs
-
----
-
-### Step 4 — Apply level boundaries
-
-Filter content to the appropriate level(s):
-
-| Level | Include |
-|-------|---------|
-| `beginner` | Import data (Excel, CSV, SQL), basic visuals (bar, line, card, table), report filters and slicers, simple measures (SUM, COUNT, AVERAGE), publish to Power BI Service, basic page navigation |
-| `intermediate` | DAX (CALCULATE, SUMX, FILTER, time intelligence functions: TOTALYTD, SAMEPERIODLASTYEAR), many-to-one relationships, star schema basics, data model design, row-level security (static), drill-through and bookmarks |
-| `advanced` | Query folding in Power Query, incremental refresh, composite models (DirectQuery + Import), advanced DAX patterns (RANKX, TOPN, virtual tables, context transition), deployment pipelines, dynamic RLS, calculation groups |
-| `all` | Union of all three levels — organize output into separate level sections |
-
----
-
-### Step 5 — Build structured report
-
-Produce a markdown document with this structure:
+Use the Agent tool to spawn the `researcher` subagent with these inputs:
 
 ```
-# Power BI: [Topic] — [Level]
-Last updated: [YYYY-MM-DD]
-Sources: [comma-separated URLs]
-
-## Overview
-[2–3 sentences: what this concept is and when Power BI users need it]
-
-## Concepts
-### [Concept / DAX Function / Feature Name]
-- **Definition:** ...
-- **When to use:** ...
-- **Syntax:** `FUNCTION(parameters)`
-- **Real example:** [realistic business scenario with DAX expression or step-by-step]
-- **Common mistakes:** ...
-
-## Worked Examples
-[Full step-by-step example with a realistic data model described in text]
-
-## Exercises
-### Exercise 1 — [Easy / Medium / Hard]
-[Problem stem]
-**Sample answer:** ...
-
-### Exercise 2 — ...
-
-## Quick Reference
-| Function / Feature | Purpose | Example |
-|--------------------|---------|---------|
-| ... | ... | ... |
+subject: powerbi
+topic: [topic]
+level: [level]
 ```
+
+Wait for the agent to complete. It will write raw findings to:
+`agents/researcher/output/powerbi-[level]-[topic-slug]-research.md`
+
+Read the `output_path:` from the agent's final output to get the exact file path.
 
 ---
 
-### Step 6 — Write or merge (if `--update`)
+### Step 3a — If `--update`: Spawn Synthesizer agent
 
-**If `--update` is set:**
-- If `skills/powerbi-[level]-[topic-slug].md` does not exist: create it with the full report
-- If it exists: append new sections only; never overwrite existing content; mark corrections as `> ⚠️ Correction as of [DATE]: [note]`; add `## Updated [YYYY-MM-DD]` header before appended content
+Use the Agent tool to spawn the `synthesizer` subagent with these inputs:
 
-**If `--update` is not set:**
-- Print the full report inline; do not write any file
-- End response with: `Tip: run with --update to save this to skills/powerbi-[level]-[topic-slug].md`
+```
+research_file: [output_path from Step 2]
+subject: powerbi
+topic: [topic]
+level: [level]
+```
+
+Wait for the agent to complete. It will write the structured knowledge doc to:
+`skills/powerbi-[level]-[topic-slug].md`
+
+Confirm the output path to the instructor.
 
 ---
 
-### Step 7 — Respond and log
+### Step 3b — If not `--update`: Print findings
 
-Return the full report to the instructor. If `--update` was used, confirm the file path written.
+Read and print the contents of the researcher's output file inline.
 
-Append to `log/power-bi-knowledge-research-update.log`:
-```
-[YYYY-MM-DD HH:MM] power-bi-knowledge-research-update
-  Input:   level=[level] topic=[topic] update=[true/false]
-  Output:  skills/powerbi-[level]-[topic-slug].md (or "printed only")
-  Status:  success | partial | failed
-  Notes:   [sources used, sections added or merged]
-```
+End with:
+`Tip: run with --update to synthesize and save this to skills/powerbi-[level]-[topic-slug].md`

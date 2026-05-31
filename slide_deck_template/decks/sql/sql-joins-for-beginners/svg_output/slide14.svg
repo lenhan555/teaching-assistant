@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <!-- Left panel -->
+  <text x="60" y="110" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#1A1A2E">Section</text>
+  <text x="60" y="155" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#2EAA5E">Summary</text>
+  <line x1="60" y1="170" x2="460" y2="170" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="60" y="210" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">Key takeaways:</text>
+  <text x="60" y="238" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">• INNER = intersection only</text>
+  <text x="60" y="262" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">• LEFT = left table is the boss</text>
+  <text x="60" y="286" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">• RIGHT = right table is the boss</text>
+  <text x="60" y="310" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">  (prefer LEFT — just swap table order)</text>
+  <text x="60" y="342" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">• NULL in result = no match on that side</text>
+  <text x="60" y="374" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">• Filter right-table cols in ON, not WHERE</text>
+  <!-- Right panel: summary table -->
+  <!-- Header -->
+  <rect x="500" y="90" width="720" height="32" rx="4" fill="#2EAA5E"/>
+  <text x="520" y="112" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">JOIN Type</text>
+  <text x="650" y="112" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">Left rows kept?</text>
+  <text x="800" y="112" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">Right rows kept?</text>
+  <text x="980" y="112" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">Use when…</text>
+  <!-- INNER JOIN row -->
+  <rect x="500" y="122" width="720" height="60" fill="#EEF4FF"/>
+  <text x="520" y="148" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#1A1A2E">INNER JOIN</text>
+  <text x="650" y="148" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Only matched</text>
+  <text x="800" y="148" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Only matched</text>
+  <text x="980" y="148" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">Need confirmed pairs only</text>
+  <!-- LEFT JOIN row -->
+  <rect x="500" y="182" width="720" height="60" fill="#E8F8EE"/>
+  <text x="520" y="208" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#1A1A2E">LEFT JOIN</text>
+  <text x="650" y="208" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">All</text>
+  <text x="800" y="208" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Only matched</text>
+  <text x="980" y="208" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">Preserve master list on left</text>
+  <!-- RIGHT JOIN row -->
+  <rect x="500" y="242" width="720" height="70" fill="#FFFFF0"/>
+  <text x="520" y="272" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#1A1A2E">RIGHT JOIN</text>
+  <text x="650" y="272" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Only matched</text>
+  <text x="800" y="272" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">All</text>
+  <text x="980" y="268" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">Preserve right list (prefer</text>
+  <text x="980" y="286" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A">LEFT instead)</text>
+  <!-- Border -->
+  <rect x="500" y="90" width="720" height="222" rx="4" fill="none" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Column dividers -->
+  <line x1="640" y1="90" x2="640" y2="312" stroke="#2EAA5E" stroke-width="1" opacity="0.3"/>
+  <line x1="790" y1="90" x2="790" y2="312" stroke="#2EAA5E" stroke-width="1" opacity="0.3"/>
+  <line x1="970" y1="90" x2="970" y2="312" stroke="#2EAA5E" stroke-width="1" opacity="0.3"/>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">14</text>
+</svg>

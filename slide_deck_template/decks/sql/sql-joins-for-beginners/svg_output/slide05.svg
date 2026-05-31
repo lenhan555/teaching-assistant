@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1A6B3A"/>
+  <ellipse cx="640" cy="60" rx="400" ry="180" fill="#5CDB8F" opacity="0.12"/>
+  <!-- Headline -->
+  <text x="640" y="90" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle">The</text>
+  <text x="640" y="130" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="32" font-weight="700" fill="#5CDB8F" text-anchor="middle">JOIN Syntax Blueprint</text>
+  <!-- Code block panel -->
+  <rect x="180" y="155" width="920" height="195" rx="10" fill="#000000" opacity="0.3" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="220" y="188" font-family="Courier New, monospace" font-size="16" font-weight="400" fill="#FFFFFF">SELECT  table1.column, table2.column</text>
+  <text x="220" y="214" font-family="Courier New, monospace" font-size="16" font-weight="400" fill="#FFFFFF">FROM    table1</text>
+  <text x="220" y="240" font-family="Courier New, monospace" font-size="16" font-weight="700" fill="#5CDB8F">[JOIN TYPE]  table2</text>
+  <text x="220" y="266" font-family="Courier New, monospace" font-size="16" font-weight="400" fill="#FFFFFF">  ON  table1.shared_key = table2.shared_key;</text>
+  <text x="220" y="330" font-family="Courier New, monospace" font-size="13" font-weight="400" fill="#FFFFFF" opacity="0.6">-- [JOIN TYPE] = INNER JOIN / LEFT JOIN / RIGHT JOIN / FULL OUTER JOIN / CROSS JOIN</text>
+  <!-- 4 numbered rows -->
+  <circle cx="200" cy="400" r="22" fill="#2EAA5E"/>
+  <text x="200" y="406" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="234" y="405" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">SELECT</text>
+  <text x="310" y="405" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#FFFFFF" opacity="0.85">— which columns you want</text>
+  <circle cx="200" cy="456" r="22" fill="#2EAA5E"/>
+  <text x="200" y="462" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="234" y="461" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">FROM</text>
+  <text x="298" y="461" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#FFFFFF" opacity="0.85">— your starting (left) table</text>
+  <circle cx="680" cy="400" r="22" fill="#2EAA5E"/>
+  <text x="680" y="406" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="714" y="405" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">JOIN TYPE + table name</text>
+  <text x="714" y="421" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#FFFFFF" opacity="0.85">— which table to combine and how</text>
+  <circle cx="680" cy="456" r="22" fill="#2EAA5E"/>
+  <text x="680" y="462" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+  <text x="714" y="461" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">ON</text>
+  <text x="742" y="461" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="400" fill="#FFFFFF" opacity="0.85">— the condition that links the two tables</text>
+  <!-- Tip -->
+  <text x="640" y="560" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#5CDB8F" text-anchor="middle">Every JOIN you ever write follows this exact skeleton — memorize it.</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#FFFFFF" opacity="0.4">05</text>
+</svg>

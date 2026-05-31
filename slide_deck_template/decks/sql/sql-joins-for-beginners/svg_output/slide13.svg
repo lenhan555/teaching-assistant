@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1A6B3A"/>
+  <!-- Warning badge -->
+  <circle cx="640" cy="75" r="28" fill="#CC3333"/>
+  <text x="640" y="83" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">!</text>
+  <!-- Headline -->
+  <text x="640" y="135" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">Watch Out —</text>
+  <text x="640" y="170" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#CC3333" text-anchor="middle">The NULL Trap</text>
+  <!-- Two code panels -->
+  <!-- WRONG panel -->
+  <rect x="60" y="195" width="560" height="300" rx="8" fill="#000000" opacity="0.3"/>
+  <rect x="60" y="195" width="560" height="30" rx="8" fill="#CC3333"/>
+  <rect x="60" y="210" width="560" height="15" fill="#CC3333"/>
+  <text x="340" y="216" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">✗  WRONG</text>
+  <text x="80" y="248" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF" opacity="0.7">-- Silently converts LEFT JOIN → INNER JOIN</text>
+  <text x="80" y="272" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">SELECT</text>
+  <text x="148" y="272" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF"> Customers.Name, Orders.Amount</text>
+  <text x="80" y="294" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">FROM</text>
+  <text x="128" y="294" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF">   Customers</text>
+  <text x="80" y="316" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">LEFT JOIN</text>
+  <text x="168" y="316" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF"> Orders ON ...</text>
+  <text x="80" y="338" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#CC3333">WHERE</text>
+  <text x="138" y="338" font-family="Courier New, monospace" font-size="12" fill="#CC3333">  Orders.Amount > 100; -- kills NULLs!</text>
+  <text x="80" y="375" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.8">Result: Carol and Dan disappear!</text>
+  <text x="80" y="395" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.8">WHERE filters out NULL rows → LEFT JOIN</text>
+  <text x="80" y="415" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.8">behaves like INNER JOIN</text>
+  <!-- CORRECT panel -->
+  <rect x="660" y="195" width="560" height="300" rx="8" fill="#000000" opacity="0.3"/>
+  <rect x="660" y="195" width="560" height="30" rx="8" fill="#2EAA5E"/>
+  <rect x="660" y="210" width="560" height="15" fill="#2EAA5E"/>
+  <text x="940" y="216" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓  CORRECT</text>
+  <text x="680" y="248" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF" opacity="0.7">-- Move filter to ON clause</text>
+  <text x="680" y="272" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">SELECT</text>
+  <text x="748" y="272" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF"> Customers.Name, Orders.Amount</text>
+  <text x="680" y="294" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">FROM</text>
+  <text x="728" y="294" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF">   Customers</text>
+  <text x="680" y="316" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">LEFT JOIN</text>
+  <text x="768" y="316" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF"> Orders</text>
+  <text x="680" y="338" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">  ON</text>
+  <text x="710" y="338" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF"> Customers.CustomerID = Orders.CustomerID</text>
+  <text x="700" y="360" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#5CDB8F">  AND</text>
+  <text x="742" y="360" font-family="Courier New, monospace" font-size="12" fill="#5CDB8F"> Orders.Amount > 100; -- stays in ON</text>
+  <text x="680" y="395" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.8">Result: Carol and Dan still appear with NULL</text>
+  <text x="680" y="415" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.8">Filter applies only to right-side matching</text>
+  <!-- Rule -->
+  <text x="640" y="545" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#5CDB8F" text-anchor="middle">Rule: Filter right-table columns in ON, not WHERE</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#FFFFFF" opacity="0.4">13</text>
+</svg>

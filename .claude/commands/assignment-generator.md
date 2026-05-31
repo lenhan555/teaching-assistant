@@ -1,0 +1,1 @@
+../../skills/assignment-generator/SKILL.md

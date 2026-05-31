@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <!-- Dark green background -->
+  <rect width="1280" height="720" fill="#1A6B3A"/>
+  <!-- Soft radial glow top-center -->
+  <ellipse cx="640" cy="60" rx="400" ry="200" fill="#5CDB8F" opacity="0.12"/>
+  <!-- Headline -->
+  <text x="640" y="110" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">By the End of This Session, You</text>
+  <text x="640" y="148" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#5CDB8F" text-anchor="middle">Will Be Able To</text>
+  <!-- Icon-badge rows centered -->
+  <!-- Row 1 -->
+  <circle cx="380" cy="210" r="22" fill="#2EAA5E"/>
+  <text x="380" y="216" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="416" y="215" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#FFFFFF">Explain what a JOIN does and why multiple tables exist</text>
+  <!-- Row 2 -->
+  <circle cx="380" cy="274" r="22" fill="#2EAA5E"/>
+  <text x="380" y="280" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="416" y="279" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#FFFFFF">Write INNER JOIN queries to retrieve matching records</text>
+  <!-- Row 3 -->
+  <circle cx="380" cy="338" r="22" fill="#2EAA5E"/>
+  <text x="380" y="344" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="416" y="343" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#FFFFFF">Write LEFT and RIGHT JOIN queries to preserve all rows</text>
+  <!-- Row 4 -->
+  <circle cx="380" cy="402" r="22" fill="#2EAA5E"/>
+  <text x="380" y="408" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="416" y="407" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#FFFFFF">Use FULL OUTER JOIN to see records from both tables</text>
+  <!-- Row 5 -->
+  <circle cx="380" cy="466" r="22" fill="#2EAA5E"/>
+  <text x="380" y="472" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="416" y="471" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#FFFFFF">Apply CROSS JOIN and Self-Join for special scenarios</text>
+  <!-- Row 6 -->
+  <circle cx="380" cy="530" r="22" fill="#2EAA5E"/>
+  <text x="380" y="536" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="416" y="535" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#FFFFFF">Chain multiple JOINs across three or more tables</text>
+  <!-- Row 7 -->
+  <circle cx="380" cy="594" r="22" fill="#2EAA5E"/>
+  <text x="380" y="600" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="416" y="599" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#FFFFFF">Identify and avoid the 4 most common JOIN mistakes</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#FFFFFF" opacity="0.4">03</text>
+</svg>

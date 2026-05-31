@@ -1,0 +1,70 @@
+{
+  "slide01": {
+    "local_path": "slide_deck_template/decks/sql/sql-joins-for-beginners/svg_output/images/slide01.jpg",
+    "source": "openverse",
+    "license": "CC0",
+    "attribution": "\"MCLI Server 'Farm'\" by cogdogblog (Openverse, CC0)",
+    "status": "sourced",
+    "query": "database tables connecting diagram"
+  },
+  "slide04": {
+    "local_path": "slide_deck_template/decks/sql/sql-joins-for-beginners/svg_output/images/slide04.jpg",
+    "source": "openverse",
+    "license": "BY-SA",
+    "attribution": "\"Allium cernuum, flower. C & O Canal Park, Montgomery co., MD. (6/05/12)\" by FritzFlohrReynolds (Openverse, BY-SA)",
+    "status": "sourced",
+    "query": "database normalization two tables relationship"
+  },
+  "slide07": {
+    "local_path": "slide_deck_template/decks/sql/sql-joins-for-beginners/svg_output/images/slide07.jpg",
+    "source": "openverse",
+    "license": "BY",
+    "attribution": "\"pone.0015774.g004.png\" by plosone-phylo (Openverse, BY)",
+    "status": "sourced",
+    "query": "Venn diagram inner join SQL overlap"
+  },
+  "slide10": {
+    "local_path": "slide_deck_template/decks/sql/sql-joins-for-beginners/svg_output/images/slide10.jpg",
+    "source": "openverse",
+    "license": "BY",
+    "attribution": "\"Clustermap search result\" by gnizr (Openverse, BY)",
+    "status": "sourced",
+    "query": "Venn diagram left join SQL all left rows"
+  },
+  "slide15": {
+    "local_path": "slide_deck_template/decks/sql/sql-joins-for-beginners/svg_output/images/slide15.jpg",
+    "source": "openverse",
+    "license": "BY",
+    "attribution": "\"Everything's connected\" by Brett Jordan (Openverse, BY)",
+    "status": "sourced",
+    "query": "Venn diagram full outer join both circles filled SQL"
+  },
+  "slide19": {
+    "status": "needs-manual",
+    "query": "Cartesian product grid matrix all combinations"
+  },
+  "slide21": {
+    "local_path": "slide_deck_template/decks/sql/sql-joins-for-beginners/svg_output/images/slide21.jpg",
+    "source": "openverse",
+    "license": "BY-SA",
+    "attribution": "\"120914-A-ET900-017\" by HonoluluDistrict (Openverse, BY-SA)",
+    "status": "sourced",
+    "query": "employee manager hierarchy org chart database"
+  },
+  "slide25": {
+    "status": "needs-manual",
+    "query": "multiple SQL tables join chain three tables"
+  },
+  "slide28": {
+    "local_path": "slide_deck_template/decks/sql/sql-joins-for-beginners/svg_output/images/slide28.jpg",
+    "source": "openverse",
+    "license": "BY",
+    "attribution": "\"Gene Ontology Entity Relationship diagram by Florian Leitner\" by dullhunk (Openverse, BY)",
+    "status": "sourced",
+    "query": "entity relationship diagram ERD primary foreign key SQL"
+  },
+  "slide34": {
+    "status": "needs-manual",
+    "query": "student studying SQL computer desk learning"
+  }
+}

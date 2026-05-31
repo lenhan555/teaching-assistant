@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <text x="60" y="95" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#1A1A2E">Watch Out —</text>
+  <text x="60" y="130" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#2EAA5E">Wrong Join Key</text>
+  <line x1="60" y1="144" x2="540" y2="144" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Code block with X overlay -->
+  <rect x="60" y="158" width="540" height="155" rx="8" fill="#F4F4F8"/>
+  <text x="80" y="186" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#CC3333">✗ WRONG: joining on Name instead of CustomerID</text>
+  <text x="80" y="208" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">SELECT</text>
+  <text x="138" y="208" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E"> *</text>
+  <text x="80" y="228" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">FROM</text>
+  <text x="124" y="228" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E"> Customers</text>
+  <text x="80" y="248" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">INNER JOIN</text>
+  <text x="170" y="248" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E"> Orders</text>
+  <text x="80" y="268" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">  ON</text>
+  <text x="110" y="268" font-family="Courier New, monospace" font-size="12" fill="#CC3333"> Customers.Name = Orders.CustomerID;</text>
+  <text x="80" y="296" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#CC3333">Result: 0 rows — text vs number comparison fails</text>
+  <!-- Big X over the ON line -->
+  <line x1="80" y1="260" x2="570" y2="260" stroke="#CC3333" stroke-width="2"/>
+  <!-- Right panel: ERD diagram -->
+  <text x="670" y="155" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">How to find the correct join key:</text>
+  <!-- Customers table card -->
+  <rect x="670" y="168" width="220" height="130" rx="8" fill="#FFFFFF" stroke="#2EAA5E" stroke-width="2"/>
+  <rect x="670" y="168" width="220" height="32" rx="8" fill="#2EAA5E"/>
+  <rect x="670" y="186" width="220" height="14" fill="#2EAA5E"/>
+  <text x="780" y="190" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Customers</text>
+  <!-- PK circle -->
+  <circle cx="702" cy="222" r="10" fill="#2EAA5E"/>
+  <text x="702" y="227" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">PK</text>
+  <text x="720" y="227" font-family="Courier New, monospace" font-size="12" fill="#2EAA5E" font-weight="700">CustomerID</text>
+  <text x="696" y="252" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Name</text>
+  <text x="696" y="272" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">City</text>
+  <!-- Arrow FK PK -->
+  <line x1="890" y1="218" x2="970" y2="218" stroke="#2EAA5E" stroke-width="2.5"/>
+  <polygon points="970,210 990,218 970,226" fill="#2EAA5E"/>
+  <text x="930" y="208" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="700" fill="#2EAA5E" text-anchor="middle">FK → PK</text>
+  <!-- Orders table card -->
+  <rect x="990" y="168" width="220" height="150" rx="8" fill="#FFFFFF" stroke="#2EAA5E" stroke-width="2"/>
+  <rect x="990" y="168" width="220" height="32" rx="8" fill="#2EAA5E"/>
+  <rect x="990" y="186" width="220" height="14" fill="#2EAA5E"/>
+  <text x="1100" y="190" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Orders</text>
+  <text x="1010" y="222" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">OrderID</text>
+  <!-- FK circle -->
+  <circle cx="1022" cy="242" r="10" fill="#E89C20"/>
+  <text x="1022" y="247" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">FK</text>
+  <text x="1040" y="247" font-family="Courier New, monospace" font-size="11" fill="#2EAA5E" font-weight="700">CustomerID</text>
+  <text x="1010" y="270" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Amount</text>
+  <text x="1010" y="290" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">ProductID</text>
+  <!-- Steps -->
+  <text x="670" y="360" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">How to find the correct key:</text>
+  <circle cx="688" cy="392" r="10" fill="#2EAA5E"/>
+  <text x="688" y="397" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">1</text>
+  <text x="710" y="397" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Look at the ERD for your database</text>
+  <circle cx="688" cy="422" r="10" fill="#2EAA5E"/>
+  <text x="688" y="427" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="710" y="427" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">The foreign key in Table B always points to PK of Table A</text>
+  <circle cx="688" cy="452" r="10" fill="#2EAA5E"/>
+  <text x="688" y="457" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">3</text>
+  <text x="710" y="457" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Ask: "Which column in Table B references Table A's PK?"</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">28</text>
+</svg>

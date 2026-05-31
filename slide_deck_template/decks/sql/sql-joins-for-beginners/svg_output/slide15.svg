@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1A6B3A"/>
+  <ellipse cx="640" cy="60" rx="400" ry="180" fill="#5CDB8F" opacity="0.12"/>
+  <text x="640" y="90" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF" text-anchor="middle">Section 3 —</text>
+  <text x="640" y="128" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="34" font-weight="700" fill="#5CDB8F" text-anchor="middle">FULL OUTER JOIN</text>
+  <!-- Venn: both circles filled — no clipPath, layer approach -->
+  <!-- Left circle filled -->
+  <circle cx="510" cy="350" r="140" fill="#2EAA5E" opacity="0.8"/>
+  <!-- Right circle filled -->
+  <circle cx="750" cy="350" r="140" fill="#5CDB8F" opacity="0.75"/>
+  <!-- Both circle outlines -->
+  <circle cx="510" cy="350" r="140" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="750" cy="350" r="140" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- Labels -->
+  <text x="420" y="345" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Customers</text>
+  <text x="420" y="363" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.8" text-anchor="middle">(left table)</text>
+  <text x="840" y="345" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#1A1A2E" text-anchor="middle">Orders</text>
+  <text x="840" y="363" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#1A1A2E" opacity="0.8" text-anchor="middle">(right table)</text>
+  <text x="630" y="345" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">All rows</text>
+  <text x="630" y="365" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">from both</text>
+  <!-- Use-case bullets -->
+  <circle cx="1000" cy="290" r="18" fill="#2EAA5E"/>
+  <text x="1000" y="296" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">→</text>
+  <text x="1030" y="294" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#FFFFFF">Compare two datasets</text>
+  <circle cx="1000" cy="348" r="18" fill="#2EAA5E"/>
+  <text x="1000" y="354" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">→</text>
+  <text x="1030" y="352" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#FFFFFF">Find mismatches on either side</text>
+  <circle cx="1000" cy="406" r="18" fill="#2EAA5E"/>
+  <text x="1000" y="412" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">→</text>
+  <text x="1030" y="410" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#FFFFFF">Reconcile two data sources</text>
+  <!-- Compatibility warning -->
+  <circle cx="1000" cy="480" r="18" fill="#E89C20"/>
+  <text x="1000" y="486" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">!</text>
+  <text x="1030" y="484" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">Not in SQLite / MySQL &lt;8.0</text>
+  <text x="1030" y="500" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#FFFFFF">Use UNION workaround (Slide 17)</text>
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#FFFFFF" opacity="0.4">15</text>
+</svg>

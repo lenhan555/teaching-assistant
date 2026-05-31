@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <text x="60" y="95" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#1A1A2E">Multiple JOINs —</text>
+  <text x="60" y="130" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#2EAA5E">Worked Example</text>
+  <line x1="60" y1="144" x2="540" y2="144" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Code block with two JOIN sections highlighted -->
+  <rect x="60" y="158" width="560" height="260" rx="8" fill="#F4F4F8"/>
+  <!-- First JOIN highlight -->
+  <rect x="60" y="250" width="560" height="44" fill="#E8F8EE" opacity="0.6"/>
+  <!-- Second JOIN highlight -->
+  <rect x="60" y="294" width="560" height="44" fill="#EEF4FF" opacity="0.6"/>
+  <text x="80" y="184" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">SELECT</text>
+  <text x="148" y="184" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E"> Customers.Name,</text>
+  <text x="80" y="202" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E">       Products.ProductName,</text>
+  <text x="80" y="220" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E">       Orders.Amount</text>
+  <text x="80" y="242" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">FROM</text>
+  <text x="128" y="242" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E">   Orders</text>
+  <text x="80" y="264" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">INNER JOIN</text>
+  <text x="180" y="264" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E"> Customers</text>
+  <text x="80" y="284" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">  ON</text>
+  <text x="110" y="284" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E"> Orders.CustomerID = Customers.CustomerID</text>
+  <text x="80" y="308" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">INNER JOIN</text>
+  <text x="180" y="308" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E"> Products</text>
+  <text x="80" y="328" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">  ON</text>
+  <text x="110" y="328" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E"> Orders.ProductID = Products.ProductID;</text>
+  <text x="80" y="385" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">2nd JOIN builds on the result of the 1st JOIN</text>
+  <!-- Result table -->
+  <text x="680" y="168" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">Result (3 rows):</text>
+  <rect x="680" y="180" width="540" height="32" rx="4" fill="#2EAA5E"/>
+  <text x="698" y="201" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Name</text>
+  <text x="830" y="201" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">ProductName</text>
+  <text x="1060" y="201" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Amount</text>
+  <rect x="680" y="212" width="540" height="28" fill="#FFFFFF"/>
+  <text x="698" y="231" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Alice</text>
+  <text x="830" y="231" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Laptop</text>
+  <text x="1060" y="231" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">1200</text>
+  <rect x="680" y="240" width="540" height="28" fill="#E8F8EE"/>
+  <text x="698" y="259" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Bob</text>
+  <text x="830" y="259" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Phone</text>
+  <text x="1060" y="259" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">800</text>
+  <rect x="680" y="268" width="540" height="28" fill="#FFFFFF"/>
+  <text x="698" y="287" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Alice</text>
+  <text x="830" y="287" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Mouse</text>
+  <text x="1060" y="287" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">25</text>
+  <rect x="680" y="180" width="540" height="116" rx="4" fill="none" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Pattern card -->
+  <rect x="680" y="320" width="540" height="160" rx="8" fill="#F4F4F8"/>
+  <rect x="680" y="320" width="540" height="32" rx="8" fill="#2EAA5E"/>
+  <rect x="680" y="336" width="540" height="16" fill="#2EAA5E"/>
+  <text x="950" y="342" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Pattern to notice</text>
+  <text x="698" y="376" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">1. Start FROM the fact table (Orders) — has foreign keys</text>
+  <text x="698" y="400" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">2. Add INNER JOIN per dimension (Customers, Products)</text>
+  <text x="698" y="424" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">3. Each ON maps back to the fact table's foreign key</text>
+  <text x="698" y="448" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">4. No limit — add more JOINs for more tables</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">26</text>
+</svg>

@@ -1,0 +1,12 @@
+[
+  {"slide_id": "slide01", "query": "database tables connecting diagram", "style_hint": "diagram"},
+  {"slide_id": "slide04", "query": "database normalization two tables relationship", "style_hint": "diagram"},
+  {"slide_id": "slide07", "query": "Venn diagram inner join SQL overlap", "style_hint": "diagram"},
+  {"slide_id": "slide10", "query": "Venn diagram left join SQL all left rows", "style_hint": "diagram"},
+  {"slide_id": "slide15", "query": "Venn diagram full outer join both circles filled SQL", "style_hint": "diagram"},
+  {"slide_id": "slide19", "query": "Cartesian product grid matrix all combinations", "style_hint": "diagram"},
+  {"slide_id": "slide21", "query": "employee manager hierarchy org chart database", "style_hint": "diagram"},
+  {"slide_id": "slide25", "query": "multiple SQL tables join chain three tables", "style_hint": "diagram"},
+  {"slide_id": "slide28", "query": "entity relationship diagram ERD primary foreign key SQL", "style_hint": "diagram"},
+  {"slide_id": "slide34", "query": "student studying SQL computer desk learning", "style_hint": "photo"}
+]

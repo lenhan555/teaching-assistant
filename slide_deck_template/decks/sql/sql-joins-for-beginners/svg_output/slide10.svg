@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <!-- Left panel -->
+  <text x="60" y="110" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="30" font-weight="700" fill="#1A1A2E">Section 2 —</text>
+  <text x="60" y="150" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#2EAA5E">LEFT JOIN</text>
+  <line x1="60" y1="165" x2="540" y2="165" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="60" y="200" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">• Returns ALL rows from the left table</text>
+  <text x="60" y="224" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">• Matching rows from the right table added</text>
+  <text x="60" y="248" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">• If right table has no match → NULL fills</text>
+  <text x="60" y="272" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">• Left table is never filtered</text>
+  <text x="60" y="310" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">Use when:</text>
+  <text x="60" y="334" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">"Show me all customers, even those</text>
+  <text x="60" y="358" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A"> who have never placed an order"</text>
+  <!-- Right panel stat cards -->
+  <rect x="660" y="130" width="530" height="130" rx="10" fill="#FFFFFF" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="840" y="185" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="48" font-weight="700" fill="#1A1A2E" text-anchor="middle">100%</text>
+  <text x="840" y="215" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A" text-anchor="middle">Left table rows always kept</text>
+  <rect x="660" y="280" width="530" height="130" rx="10" fill="#FFFFFF" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="840" y="340" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="48" font-weight="700" fill="#2EAA5E" text-anchor="middle">NULL</text>
+  <text x="840" y="368" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A" text-anchor="middle">Fills unmatched right-side columns</text>
+  <!-- Venn diagram: left filled, right outline — no clipPath -->
+  <!-- Left circle: filled -->
+  <circle cx="740" cy="520" r="70" fill="#2EAA5E" opacity="0.75"/>
+  <!-- Overlap approximation -->
+  <ellipse cx="790" cy="520" rx="28" ry="62" fill="#5CDB8F" opacity="0.5"/>
+  <!-- Right circle outline -->
+  <circle cx="820" cy="520" r="70" fill="none" stroke="#2EAA5E" stroke-width="2"/>
+  <text x="720" y="525" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Left</text>
+  <text x="870" y="525" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A" text-anchor="middle">Right</text>
+  <text x="800" y="610" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A" text-anchor="middle">Left fully filled = all left rows preserved</text>
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">10</text>
+</svg>

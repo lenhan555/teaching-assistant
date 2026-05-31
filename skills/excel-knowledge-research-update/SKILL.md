@@ -1,3 +1,11 @@
+---
+name: excel-knowledge-research-update
+description: Research Excel concepts at a specified skill level and optionally write or merge findings into the project's knowledge docs in skills/.
+arguments: "[level] [topic] [--update]"
+outputs:
+  - skills/excel-[level]-[topic-slug].md
+---
+
 # Skill: excel-knowledge-research-update
 
 ## Usage
@@ -12,7 +20,7 @@
 |----------|----------|--------|---------|
 | `level` | no | `beginner` / `intermediate` / `advanced` / `all` | `all` |
 | `topic` | no | e.g. `vlookup`, `pivot tables`, `power query` | `general` |
-| `--update` | no | flag | off (print only) |
+| `--update` | no | flag — writes synthesized doc to `skills/` | off (print only) |
 
 ## Examples
 
@@ -26,110 +34,50 @@
 
 ## Execution Steps
 
-### Step 1 — Parse invocation
+### Step 1 — Parse arguments
 
-Extract `level`, `topic`, and `--update` flag from the command. Normalize `topic` to a slug (lowercase, spaces → hyphens). If `level` is omitted, default to `all`. If `topic` is omitted, default to `general`.
-
----
-
-### Step 2 — Check existing content
-
-Read any existing file at `skills/excel-[level]-[topic-slug].md`. Note which concepts are already covered so research avoids duplication and only fills gaps.
+Extract `level`, `topic`, and `--update` flag. Normalize `topic` to a slug (lowercase, spaces → hyphens). Default `level` to `all`, `topic` to `general` if omitted.
 
 ---
 
-### Step 3 — Web research
+### Step 2 — Spawn Researcher agent
 
-Search for authoritative content using the query templates below. Fetch at least 3 sources per level included.
-
-**Query templates:**
-- `Excel [topic] [level] tutorial 2024 2025`
-- `Excel [topic] formula examples`
-- `Excel [topic] best practices common mistakes`
-- `site:support.microsoft.com Excel [topic]`
-- `site:exceljet.net [topic]`
-
-**Preferred sources (in priority order):**
-1. support.microsoft.com/excel — official Microsoft documentation
-2. exceljet.net — formula reference and examples
-3. chandoo.org — tutorials and real-world use cases
-4. contextures.com — detailed how-to guides
-5. Recent articles (≤ 2 years) from reputable Excel blogs
-
----
-
-### Step 4 — Apply level boundaries
-
-Filter content to the appropriate level(s):
-
-| Level | Include |
-|-------|---------|
-| `beginner` | SUM, AVERAGE, COUNT, IF, VLOOKUP / XLOOKUP, basic charts (bar, line, pie), table formatting, sorting & filtering, basic cell references (absolute vs relative) |
-| `intermediate` | PivotTables, Power Query (import, transform, load), nested IFs, SUMIF / COUNTIF, named ranges, conditional formatting, data validation, INDEX/MATCH |
-| `advanced` | Power Pivot / DAX basics, array formulas (FILTER, UNIQUE, SORT, SPILL), dynamic arrays, VBA intro (record macro, simple Sub), large-dataset performance (data model vs worksheet), LAMBDA |
-| `all` | Union of all three levels — organize output into separate level sections |
-
----
-
-### Step 5 — Build structured report
-
-Produce a markdown document with this structure:
+Use the Agent tool to spawn the `researcher` subagent with these inputs:
 
 ```
-# Excel: [Topic] — [Level]
-Last updated: [YYYY-MM-DD]
-Sources: [comma-separated URLs]
-
-## Overview
-[2–3 sentences: what this concept is and when Excel users reach for it]
-
-## Concepts
-### [Concept / Function Name]
-- **Definition:** ...
-- **When to use:** ...
-- **Syntax:** `=FUNCTION(arg1, arg2, ...)`
-- **Real example:** [realistic business scenario with formula and result]
-- **Common mistakes:** ...
-
-## Worked Examples
-[Full step-by-step example with a realistic dataset described in text]
-
-## Exercises
-### Exercise 1 — [Easy / Medium / Hard]
-[Problem stem]
-**Sample answer:** ...
-
-### Exercise 2 — ...
-
-## Quick Reference
-| Function / Feature | Purpose | Example |
-|--------------------|---------|---------|
-| ... | ... | ... |
+subject: excel
+topic: [topic]
+level: [level]
 ```
+
+Wait for the agent to complete. It will write raw findings to:
+`agents/researcher/output/excel-[level]-[topic-slug]-research.md`
+
+Read the `output_path:` from the agent's final output to get the exact file path.
 
 ---
 
-### Step 6 — Write or merge (if `--update`)
+### Step 3a — If `--update`: Spawn Synthesizer agent
 
-**If `--update` is set:**
-- If `skills/excel-[level]-[topic-slug].md` does not exist: create it with the full report
-- If it exists: append new sections only; never overwrite existing content; mark corrections as `> ⚠️ Correction as of [DATE]: [note]`; add `## Updated [YYYY-MM-DD]` header before appended content
+Use the Agent tool to spawn the `synthesizer` subagent with these inputs:
 
-**If `--update` is not set:**
-- Print the full report inline; do not write any file
-- End response with: `Tip: run with --update to save this to skills/excel-[level]-[topic-slug].md`
+```
+research_file: [output_path from Step 2]
+subject: excel
+topic: [topic]
+level: [level]
+```
+
+Wait for the agent to complete. It will write the structured knowledge doc to:
+`skills/excel-[level]-[topic-slug].md`
+
+Confirm the output path to the instructor.
 
 ---
 
-### Step 7 — Respond and log
+### Step 3b — If not `--update`: Print findings
 
-Return the full report to the instructor. If `--update` was used, confirm the file path written.
+Read and print the contents of the researcher's output file inline.
 
-Append to `log/excel-knowledge-research-update.log`:
-```
-[YYYY-MM-DD HH:MM] excel-knowledge-research-update
-  Input:   level=[level] topic=[topic] update=[true/false]
-  Output:  skills/excel-[level]-[topic-slug].md (or "printed only")
-  Status:  success | partial | failed
-  Notes:   [sources used, sections added or merged]
-```
+End with:
+`Tip: run with --update to synthesize and save this to skills/excel-[level]-[topic-slug].md`

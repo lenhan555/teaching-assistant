@@ -1,0 +1,17 @@
+[2026-05-25 00:00] assignment-generator
+  Input:   subject=sql topic=joins level=intermediate type=take-home
+  Output:  assignments/sql-intermediate-joins-take-home.md
+  Status:  success
+  Notes:   7 questions generated (2 Easy, 3 Medium, 2 Hard); types used: Practical (Q1, Q2, Q4, Q5, Q6), Short Answer + Practical (Q3, Q7); knowledge doc used: skills/sql-intermediate-joins.md; covers INNER JOIN, LEFT JOIN, RIGHT JOIN / FULL OUTER JOIN, SELF JOIN, missing-record detection, multi-table aggregation with date filtering, correlated subquery rewrite, and join performance; dataset includes CREATE TABLE + INSERT for departments, employees, customers, orders
+
+[2026-05-25 00:00] assignment-generator
+  Input:   subject=sql topic=joins level=intermediate type=in-class
+  Output:  assignments/sql-intermediate-joins-in-class.md
+  Status:  success
+  Notes:   5 practicals generated (6/8/10/10/6 min time boxes; total 50 min). Types used: fill-in-the-blank scaffold (P1, P2, P3, P4), bug-fix debugging (P5). JOIN types covered: LEFT JOIN (P1, P3, P5), INNER JOIN (P2), anti-join pattern (P3), SELF JOIN (P4), LEFT JOIN + ON-clause filter (P5). Knowledge doc used: skills/sql-intermediate-joins.md.
+
+[2026-05-29 00:00] assignment-generator — SYSTEM NOTE
+  Input:   —
+  Output:  —
+  Status:  no change
+  Notes:   No changes to assignment-generator agent or workflow this session. System update: slide-deck pipeline now produces PPTX via PPT Master (Claude writes SVGs directly). Assignments in assignments/ are still referenced by excel-reconciler for sheet matching — naming convention unchanged: [subject]-[level]-[topic-slug]-take-home.md.

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <!-- White background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+
+  <!-- Left column headline: "Core" near-black + "JOINs" green-mid -->
+  <text x="60" y="138" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#1A1A2E">Core </text>
+  <text x="170" y="138" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#2EAA5E">JOINs</text>
+  <!-- Divider -->
+  <line x1="60" y1="152" x2="500" y2="152" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Framing text -->
+  <text x="60" y="175" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">The two JOINs you will write every day</text>
+
+  <!-- Decision-rule callout box -->
+  <rect x="60" y="210" width="420" height="52" rx="12" fill="#FFFFFF" stroke="#5CDB8F" stroke-width="1.5"/>
+  <text x="80" y="231" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="400" fill="#1A1A2E" font-style="italic">If rows go missing unexpectedly —</text>
+  <text x="80" y="249" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="600" fill="#1A1A2E">suspect INNER JOIN.</text>
+
+  <!-- ── Right column Row 1: INNER JOIN (y-center=185) ── -->
+  <!-- Intersecting circles icon badge -->
+  <circle cx="562" cy="185" r="22" fill="#2EAA5E"/>
+  <circle cx="555" cy="185" r="9" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="569" cy="185" r="9" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="596" y="181" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="600" fill="#1A1A2E">INNER JOIN</text>
+  <text x="596" y="199" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">Returns only matched rows. Silent row drops when key is missing.</text>
+  <!-- Code snippet card Row 1 -->
+  <rect x="540" y="218" width="660" height="68" rx="8" fill="#F4F4F8"/>
+  <text x="556" y="237" font-family="Courier New, monospace" font-size="10" fill="#1A1A2E">SELECT o.order_id, c.customer_name</text>
+  <text x="556" y="253" font-family="Courier New, monospace" font-size="10" fill="#1A1A2E">FROM orders o</text>
+  <text x="556" y="269" font-family="Courier New, monospace" font-size="10" fill="#1A1A2E">INNER JOIN customers c ON o.customer_id = c.customer_id;</text>
+
+  <!-- ── Right column Row 2: LEFT JOIN (y-center=355) ── -->
+  <!-- Left-circle icon badge -->
+  <circle cx="562" cy="355" r="22" fill="#2EAA5E"/>
+  <circle cx="556" cy="355" r="11" fill="#FFFFFF"/>
+  <circle cx="569" cy="355" r="9" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="596" y="351" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="600" fill="#1A1A2E">LEFT JOIN</text>
+  <text x="596" y="369" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#4A4A6A">All left-table rows kept; unmatched right-table columns = NULL.</text>
+  <!-- Warning text -->
+  <text x="596" y="392" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="400" fill="#4A4A6A" font-style="italic">⚠ WHERE filter on right-table col silently converts to INNER JOIN.</text>
+  <text x="596" y="406" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="600" fill="#2EAA5E">Move filter to ON clause to preserve the LEFT JOIN.</text>
+  <!-- Code snippet card Row 2 -->
+  <rect x="540" y="420" width="660" height="82" rx="8" fill="#F4F4F8"/>
+  <text x="556" y="440" font-family="Courier New, monospace" font-size="10" fill="#1A1A2E">SELECT c.name, o.order_date</text>
+  <text x="556" y="456" font-family="Courier New, monospace" font-size="10" fill="#1A1A2E">FROM customers c</text>
+  <text x="556" y="472" font-family="Courier New, monospace" font-size="10" fill="#1A1A2E">LEFT JOIN orders o ON c.id = o.customer_id</text>
+  <text x="556" y="488" font-family="Courier New, monospace" font-size="10" fill="#1A1A2E">  AND o.status = 'active'; -- filter in ON clause</text>
+
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, sans-serif" font-size="11" text-anchor="end" fill="#4A4A6A">4</text>
+</svg>

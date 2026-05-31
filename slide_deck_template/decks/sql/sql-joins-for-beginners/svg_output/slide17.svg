@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1A6B3A"/>
+  <ellipse cx="640" cy="60" rx="400" ry="150" fill="#5CDB8F" opacity="0.12"/>
+  <text x="640" y="88" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">FULL OUTER JOIN —</text>
+  <text x="640" y="122" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#5CDB8F" text-anchor="middle">The UNION Workaround</text>
+  <text x="640" y="158" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" opacity="0.8">For SQLite and MySQL &lt;8.0 that do not support FULL OUTER JOIN:</text>
+  <!-- Code block -->
+  <rect x="120" y="170" width="1040" height="330" rx="10" fill="#000000" opacity="0.28" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="160" y="200" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#5CDB8F">SELECT</text>
+  <text x="228" y="200" font-family="Courier New, monospace" font-size="13" fill="#FFFFFF"> Customers.Name, Orders.Product, Orders.Amount</text>
+  <text x="160" y="222" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#5CDB8F">FROM</text>
+  <text x="208" y="222" font-family="Courier New, monospace" font-size="13" fill="#FFFFFF">   Customers</text>
+  <text x="160" y="244" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#5CDB8F">LEFT JOIN</text>
+  <text x="248" y="244" font-family="Courier New, monospace" font-size="13" fill="#FFFFFF"> Orders ON Customers.CustomerID = Orders.CustomerID</text>
+  <!-- UNION keyword prominent -->
+  <text x="640" y="286" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="22" font-weight="700" fill="#5CDB8F" text-anchor="middle">UNION</text>
+  <text x="160" y="318" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#5CDB8F">SELECT</text>
+  <text x="228" y="318" font-family="Courier New, monospace" font-size="13" fill="#FFFFFF"> Customers.Name, Orders.Product, Orders.Amount</text>
+  <text x="160" y="340" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#5CDB8F">FROM</text>
+  <text x="208" y="340" font-family="Courier New, monospace" font-size="13" fill="#FFFFFF">   Customers</text>
+  <text x="160" y="362" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#5CDB8F">RIGHT JOIN</text>
+  <text x="260" y="362" font-family="Courier New, monospace" font-size="13" fill="#FFFFFF"> Orders ON Customers.CustomerID = Orders.CustomerID;</text>
+  <text x="160" y="392" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF" opacity="0.6">-- Replace RIGHT JOIN with another LEFT JOIN if not supported either</text>
+  <text x="160" y="412" font-family="Courier New, monospace" font-size="12" fill="#FFFFFF" opacity="0.6">-- FROM Orders LEFT JOIN Customers ON ...</text>
+  <!-- Annotation -->
+  <text x="640" y="545" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="400" fill="#FFFFFF" text-anchor="middle">UNION automatically removes duplicate rows from the overlap region.</text>
+  <text x="640" y="568" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="14" font-weight="700" fill="#5CDB8F" text-anchor="middle">Result is identical to FULL OUTER JOIN.</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#FFFFFF" opacity="0.4">17</text>
+</svg>

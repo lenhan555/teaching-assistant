@@ -1,0 +1,23 @@
+[2026-05-31 00:00] slide-qc
+  Input:   slide_deck_template/decks/sql/sql-joins-for-beginners.md (34 slides + SVG output)
+  Output:  QC report delivered inline; no revised slides saved
+  Status:  success
+  Notes:   Overall score: 19/25. Critical issues: 2. Top priority: Inconsistent headline font sizes across dark slides (spec = 36pt, actual = 22–34pt on 13 of 17 dark slides). Secondary priority: Off-palette color #4A90D9 (blue) used in slide16 SVG and #F5EEFF/#FFF3EA in slide32 SVG. Structural strength: perfect alternation rhythm maintained across all 34 slides; narrative arc and beginner scaffolding are excellent.
+
+[2026-05-31 12:00] slide-qc
+  Input:   slide_deck_template/decks/sql/sql-joins-for-beginners.md (34 slides, markdown blueprint)
+  Output:  QC report inline; all Critical + Major issues fixed in-place. Deck now 35 slides.
+  Status:  success
+  Notes:   Score 17/25 pre-fix. Critical: Slides 13+27 red (#CC3333) headline accent → GREEN_LIGHT. Major: off-palette row tints on Slides 14/16/32 corrected; Slides 4/12/29/30 trimmed to ≤30 words; Slide 31 split (COALESCE → Bonus). Slide 33 headline made declarative. Instructor: review Slide 31b before delivery.
+
+[2026-05-31 12:01] slide-qc
+  Input:   slide_deck_template/decks/sql-intermediate-joins-v2.md (10 slides, markdown blueprint)
+  Output:  QC report inline; Critical + Major issues fixed in-place. Deck remains 10 slides.
+  Status:  success
+  Notes:   Score 16/25 pre-fix. Critical: Slide 7 layout G→F (was wrong pattern); Slide 10 dual CTA split into primary + Bonus Challenge. Major: Slide 3 two-tone headline added (green-light accent); Slide 7 headline "Subqueries vs JOINs" → "Correlated Subqueries / Slow You Down"; Slide 8 reduced from 5 icon rows to 3; Slide 10 icon reminders trimmed to ≤5 words. Design compliance checklist updated.
+
+[2026-05-31 12:02] slide-qc
+  Input:   slide_deck_template/decks/sql-intermediate-joins.md (10 slides → 12 slides, full rewrite)
+  Output:  Full structured rewrite applied. Deck expanded from 10 to 12 slides.
+  Status:  success
+  Notes:   Score 15/25 pre-fix. Critical: Slides 4+5 each carried 2 JOIN types — split into 4 single-concept slides (new 4–7). Slide 7 two-tone headline fixed ("Subquery" + "Rewrites"). Major: Slide 8 reduced to 3 icon rows; Slide 9 retitled declaratively; Slide 10 consolidated to 4 summary bullets + Bonus Challenge CTA. All dark slides now spec green-light (#5CDB8F) accent. Background alternation verified dark/white across all 12 slides.

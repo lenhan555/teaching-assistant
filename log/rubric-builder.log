@@ -1,0 +1,11 @@
+[2026-05-25 00:00] rubric-builder
+  Input:   assignments/sql-intermediate-joins-take-home.md subject=sql topic=joins level=intermediate
+  Output:  rubrics/sql-intermediate-joins-rubric.md
+  Status:  success
+  Notes:   7 questions mapped to 10 criteria + 1 submission format criterion = 11 total. Total weight: 100 points. Assignment covers INNER JOIN, LEFT JOIN, RIGHT JOIN, SELF JOIN, and complex multi-table JOINs with date filtering and correlated subqueries. Two short-answer sections (Q3 Part A, Q7 Part B) allow partial credit. Key edge cases documented: NULL handling in sorts, date filter placement in ON vs WHERE clause (critical concept), and correlated subquery rewrite validation. All criteria include specific observable conditions for full/partial/zero marks.
+
+[2026-05-29 00:00] rubric-builder — SYSTEM NOTE
+  Input:   —
+  Output:  —
+  Status:  no change
+  Notes:   No changes to rubric-builder agent or workflow this session. System update: slide-deck pipeline now produces fully editable native DrawingML PPTX files via PPT Master. Rubric files in rubrics/ remain the grading-agent's sole input — naming and format unchanged.

@@ -1,0 +1,11 @@
+[2026-05-25 00:00] researcher
+  Input:   subject=sql topic=joins level=intermediate
+  Output:  agents/researcher/output/sql-intermediate-joins-research.md
+  Status:  success
+  Notes:   Sources used: use-the-index-luke.com/sql/join, learnsql.com/blog/subquery-vs-join, datalemur.com/sql-tutorial/sql-joins-inner-outer-left-right, ai2sql.io/learn/sql-join-optimization-guide, dbschema.com/blog/tutorials/sql-joins-explained, w3schools.com/sql/sql_join.asp, sqlenlight.com/support/help/sa0128, atlassian.com/data/sql/sql-join-types-explained-visually. Fetch failures (HTTP 403): geeksforgeeks.org, stevestedman.com, sqlenlight.com — content obtained from alternative sources instead.
+
+[2026-05-29 00:00] researcher — SYSTEM NOTE
+  Input:   —
+  Output:  —
+  Status:  no change
+  Notes:   No changes to researcher agent or workflow this session. System update: slide-deck now has a v2 blueprint standard (sql-intermediate-joins-v2.md) — future research docs feeding the slide-generator should aim for the same specificity level (exact visual specs, gradient coordinates, numbered build steps). Researcher output format (agents/researcher/output/[topic]-research.md) unchanged.

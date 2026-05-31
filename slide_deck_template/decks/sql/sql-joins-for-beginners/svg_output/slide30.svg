@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <text x="60" y="110" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#1A1A2E">Best</text>
+  <text x="60" y="155" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="36" font-weight="700" fill="#2EAA5E">Practices</text>
+  <line x1="60" y1="170" x2="440" y2="170" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="60" y="200" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#4A4A6A">Apply these habits from day one.</text>
+  <!-- 8 checklist rows -->
+  <circle cx="480" cy="110" r="20" fill="#2EAA5E"/>
+  <text x="480" y="116" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="512" y="115" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#1A1A2E">Always prefix column names with table name or alias (c.Name, not just Name)</text>
+  <circle cx="480" cy="170" r="20" fill="#2EAA5E"/>
+  <text x="480" y="176" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="512" y="175" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#1A1A2E">Use meaningful aliases (c for Customers, o for Orders — not a, b)</text>
+  <circle cx="480" cy="230" r="20" fill="#2EAA5E"/>
+  <text x="480" y="236" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="512" y="235" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#1A1A2E">Start FROM the most central table — the fact table with foreign keys</text>
+  <circle cx="480" cy="290" r="20" fill="#2EAA5E"/>
+  <text x="480" y="296" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="512" y="295" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#1A1A2E">Verify your join key in the ERD before writing the query</text>
+  <circle cx="480" cy="350" r="20" fill="#2EAA5E"/>
+  <text x="480" y="356" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="512" y="355" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#1A1A2E">Use LEFT JOIN when you need to preserve all rows from one side</text>
+  <circle cx="480" cy="410" r="20" fill="#2EAA5E"/>
+  <text x="480" y="416" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="512" y="415" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#1A1A2E">Filter right-table columns in ON clause, not WHERE — preserves NULLs</text>
+  <circle cx="480" cy="470" r="20" fill="#2EAA5E"/>
+  <text x="480" y="476" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="512" y="475" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#1A1A2E">Check row count before and after JOIN — unexpected duplicates signal 1-to-many</text>
+  <circle cx="480" cy="530" r="20" fill="#2EAA5E"/>
+  <text x="480" y="536" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">✓</text>
+  <text x="512" y="535" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" fill="#1A1A2E">Test with small datasets before running on production tables</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">30</text>
+</svg>

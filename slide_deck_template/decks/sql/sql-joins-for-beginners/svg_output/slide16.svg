@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <text x="60" y="100" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#1A1A2E">FULL OUTER JOIN —</text>
+  <text x="60" y="138" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="28" font-weight="700" fill="#2EAA5E">Worked Example</text>
+  <line x1="60" y1="152" x2="560" y2="152" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Code block -->
+  <rect x="60" y="165" width="520" height="165" rx="8" fill="#F4F4F8"/>
+  <text x="80" y="192" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">SELECT</text>
+  <text x="148" y="192" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E"> Customers.Name, Orders.Product,</text>
+  <text x="80" y="212" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E">       Orders.Amount</text>
+  <text x="80" y="234" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">FROM</text>
+  <text x="128" y="234" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E">   Customers</text>
+  <text x="80" y="256" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">FULL OUTER JOIN</text>
+  <text x="230" y="256" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E"> Orders</text>
+  <text x="80" y="278" font-family="Courier New, monospace" font-size="12" font-weight="700" fill="#2EAA5E">  ON</text>
+  <text x="110" y="278" font-family="Courier New, monospace" font-size="12" fill="#1A1A2E"> Customers.CustomerID = Orders.CustomerID;</text>
+  <!-- Three zones explanation -->
+  <text x="60" y="358" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">Three zones in the result:</text>
+  <rect x="60" y="370" width="16" height="16" fill="#2EAA5E"/>
+  <text x="86" y="384" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Zone 1 — Matched rows (Alice, Bob): full data</text>
+  <rect x="60" y="398" width="16" height="16" fill="#4A90D9"/>
+  <text x="86" y="412" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Zone 2 — Left-only (Carol, Dan): Name filled, Orders = NULL</text>
+  <rect x="60" y="426" width="16" height="16" fill="#E89C20"/>
+  <text x="86" y="440" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Zone 3 — Right-only (CustID=5): Name = NULL, Orders filled</text>
+  <!-- Result table -->
+  <rect x="620" y="90" width="600" height="32" rx="4" fill="#2EAA5E"/>
+  <text x="638" y="112" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Name</text>
+  <text x="780" y="112" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Product</text>
+  <text x="980" y="112" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Amount</text>
+  <!-- Zone 1 matched -->
+  <rect x="620" y="122" width="600" height="28" fill="#E8F8EE"/>
+  <rect x="620" y="122" width="5" height="28" fill="#2EAA5E"/>
+  <text x="638" y="141" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Alice</text>
+  <text x="780" y="141" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Laptop</text>
+  <text x="980" y="141" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">1200</text>
+  <rect x="620" y="150" width="600" height="28" fill="#E8F8EE"/>
+  <rect x="620" y="150" width="5" height="28" fill="#2EAA5E"/>
+  <text x="638" y="169" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Alice</text>
+  <text x="780" y="169" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Mouse</text>
+  <text x="980" y="169" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">25</text>
+  <rect x="620" y="178" width="600" height="28" fill="#E8F8EE"/>
+  <rect x="620" y="178" width="5" height="28" fill="#2EAA5E"/>
+  <text x="638" y="197" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Bob</text>
+  <text x="780" y="197" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Phone</text>
+  <text x="980" y="197" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">800</text>
+  <!-- Zone 2 left-only -->
+  <rect x="620" y="206" width="600" height="28" fill="#EEF4FF"/>
+  <rect x="620" y="206" width="5" height="28" fill="#4A90D9"/>
+  <text x="638" y="225" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Carol</text>
+  <text x="780" y="225" font-family="Courier New, monospace" font-size="12" fill="#CC3333" font-weight="700">NULL</text>
+  <text x="980" y="225" font-family="Courier New, monospace" font-size="12" fill="#CC3333" font-weight="700">NULL</text>
+  <rect x="620" y="234" width="600" height="28" fill="#EEF4FF"/>
+  <rect x="620" y="234" width="5" height="28" fill="#4A90D9"/>
+  <text x="638" y="253" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Dan</text>
+  <text x="780" y="253" font-family="Courier New, monospace" font-size="12" fill="#CC3333" font-weight="700">NULL</text>
+  <text x="980" y="253" font-family="Courier New, monospace" font-size="12" fill="#CC3333" font-weight="700">NULL</text>
+  <!-- Zone 3 right-only -->
+  <rect x="620" y="262" width="600" height="28" fill="#FFF8E8"/>
+  <rect x="620" y="262" width="5" height="28" fill="#E89C20"/>
+  <text x="638" y="281" font-family="Courier New, monospace" font-size="12" fill="#CC3333" font-weight="700">NULL</text>
+  <text x="780" y="281" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Keyboard</text>
+  <text x="980" y="281" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">75</text>
+  <rect x="620" y="90" width="600" height="200" rx="4" fill="none" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">16</text>
+</svg>

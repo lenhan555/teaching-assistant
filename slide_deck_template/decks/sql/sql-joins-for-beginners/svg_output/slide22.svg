@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <text x="60" y="100" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="30" font-weight="700" fill="#1A1A2E">Self-Join —</text>
+  <text x="60" y="138" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="30" font-weight="700" fill="#2EAA5E">Worked Example</text>
+  <line x1="60" y1="152" x2="540" y2="152" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Code block -->
+  <rect x="60" y="165" width="580" height="195" rx="8" fill="#F4F4F8"/>
+  <text x="80" y="193" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#2EAA5E">SELECT</text>
+  <text x="148" y="193" font-family="Courier New, monospace" font-size="13" fill="#1A1A2E"> e.Name AS Employee, m.Name AS Manager</text>
+  <text x="80" y="215" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#2EAA5E">FROM</text>
+  <text x="128" y="215" font-family="Courier New, monospace" font-size="13" fill="#1A1A2E">   Employees </text>
+  <text x="240" y="215" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#2EAA5E">AS e</text>
+  <text x="80" y="237" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#2EAA5E">LEFT JOIN</text>
+  <text x="168" y="237" font-family="Courier New, monospace" font-size="13" fill="#1A1A2E"> Employees </text>
+  <text x="288" y="237" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#2EAA5E">AS m</text>
+  <!-- highlight ON clause box -->
+  <rect x="75" y="252" width="540" height="30" rx="4" fill="#FFFFF0"/>
+  <text x="80" y="271" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#2EAA5E">  ON</text>
+  <text x="112" y="271" font-family="Courier New, monospace" font-size="13" fill="#1A1A2E"> e.ManagerID = m.EmployeeID;</text>
+  <text x="80" y="330" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#1A1A2E">e = employee copy   |   m = manager copy (same table!)</text>
+  <!-- Arrow from ON clause annotation -->
+  <line x1="400" y1="275" x2="400" y2="310" stroke="#2EAA5E" stroke-width="1.5"/>
+  <rect x="300" y="310" width="220" height="30" rx="6" fill="#E8F8EE" stroke="#2EAA5E" stroke-width="1"/>
+  <text x="410" y="330" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="700" fill="#2EAA5E" text-anchor="middle">Same table, two aliases</text>
+  <!-- Result table -->
+  <text x="700" y="165" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">Result:</text>
+  <rect x="700" y="178" width="500" height="32" rx="4" fill="#2EAA5E"/>
+  <text x="720" y="199" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Employee</text>
+  <text x="920" y="199" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Manager</text>
+  <rect x="700" y="210" width="500" height="28" fill="#FFFFFF"/>
+  <text x="720" y="229" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Sara</text>
+  <text x="920" y="229" font-family="Courier New, monospace" font-size="12" fill="#CC3333">NULL</text>
+  <rect x="700" y="238" width="500" height="28" fill="#E8F8EE"/>
+  <text x="720" y="257" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Tom</text>
+  <text x="920" y="257" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Sara</text>
+  <rect x="700" y="266" width="500" height="28" fill="#FFFFFF"/>
+  <text x="720" y="285" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Uma</text>
+  <text x="920" y="285" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Sara</text>
+  <rect x="700" y="294" width="500" height="28" fill="#E8F8EE"/>
+  <text x="720" y="313" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Vic</text>
+  <text x="920" y="313" font-family="Courier New, monospace" font-size="12" fill="#4A4A6A">Tom</text>
+  <rect x="700" y="178" width="500" height="144" rx="4" fill="none" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Three key points -->
+  <circle cx="720" cy="375" r="10" fill="#2EAA5E"/>
+  <text x="745" y="380" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">"e" is employee copy; "m" is manager copy — same physical table</text>
+  <circle cx="720" cy="408" r="10" fill="#2EAA5E"/>
+  <text x="745" y="413" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">LEFT JOIN ensures Sara appears with NULL (no manager)</text>
+  <circle cx="720" cy="441" r="10" fill="#2EAA5E"/>
+  <text x="745" y="446" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A">Without aliases SQL cannot resolve which Employees copy</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">22</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="15%" r="90%" fx="50%" fy="15%">
+      <stop offset="0%" stop-color="#5CDB8F"/>
+      <stop offset="100%" stop-color="#1A6B3A"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <!-- Atmosphere glow upper-left -->
+  <ellipse cx="358" cy="115" rx="240" ry="175" fill="#5CDB8F" opacity="0.20"/>
+  <!-- Decorative gem top-right -->
+  <ellipse cx="1210" cy="72" rx="34" ry="26" fill="#5CDB8F" opacity="0.35"/>
+  <ellipse cx="1210" cy="72" rx="20" ry="15" fill="#5CDB8F" opacity="0.5"/>
+
+  <!-- Headline left-aligned -->
+  <text x="60" y="105" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="34" font-weight="700" fill="#FFFFFF">Subqueries vs JOINs</text>
+  <!-- Supporting sentence -->
+  <text x="60" y="135" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#FFFFFF" opacity="0.8">Correlated subqueries re-run once per outer row — nested loop on large tables is slow.</text>
+  <text x="60" y="152" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="400" fill="#FFFFFF" opacity="0.8">Rewrite as a JOIN to let the optimizer handle it efficiently.</text>
+
+  <!-- ── Left frosted card: NOT IN rewrite (x=60, w=548) ── -->
+  <rect x="60" y="174" width="548" height="400" rx="14" fill="#FFFFFF" fill-opacity="0.18" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="1"/>
+  <!-- Card label -->
+  <text x="80" y="204" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="600" fill="#5CDB8F">NOT IN → LEFT JOIN + IS NULL</text>
+  <!-- Before section -->
+  <text x="80" y="230" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" opacity="0.7">Before (slow):</text>
+  <rect x="80" y="240" width="510" height="76" rx="6" fill="#FFFFFF" fill-opacity="0.08"/>
+  <text x="94" y="258" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">SELECT c.name FROM customers c</text>
+  <text x="94" y="274" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">WHERE c.id NOT IN (</text>
+  <text x="94" y="290" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">  SELECT customer_id FROM orders</text>
+  <text x="94" y="306" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">);</text>
+  <!-- After section -->
+  <text x="80" y="336" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="600" fill="#5CDB8F">After (fast):</text>
+  <rect x="80" y="346" width="510" height="76" rx="6" fill="#FFFFFF" fill-opacity="0.08"/>
+  <text x="94" y="364" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">SELECT c.name FROM customers c</text>
+  <text x="94" y="380" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">LEFT JOIN orders o ON c.id = o.customer_id</text>
+  <text x="94" y="396" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">WHERE o.customer_id IS NULL;</text>
+  <!-- Performance note -->
+  <text x="80" y="450" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="400" fill="#FFFFFF" opacity="0.75">The LEFT JOIN + IS NULL pattern avoids the</text>
+  <text x="80" y="466" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="400" fill="#FFFFFF" opacity="0.75">correlated re-execution on every outer row.</text>
+
+  <!-- ── Right frosted card: EXISTS rewrite (x=636, w=548) ── -->
+  <rect x="636" y="174" width="548" height="400" rx="14" fill="#FFFFFF" fill-opacity="0.18" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="1"/>
+  <!-- Card label -->
+  <text x="656" y="204" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="600" fill="#5CDB8F">EXISTS → INNER JOIN + DISTINCT</text>
+  <!-- Before section -->
+  <text x="656" y="230" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" opacity="0.7">Before (slow):</text>
+  <rect x="656" y="240" width="510" height="76" rx="6" fill="#FFFFFF" fill-opacity="0.08"/>
+  <text x="670" y="258" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">SELECT c.name FROM customers c</text>
+  <text x="670" y="274" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">WHERE EXISTS (</text>
+  <text x="670" y="290" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">  SELECT 1 FROM orders o</text>
+  <text x="670" y="306" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">  WHERE o.customer_id = c.id</text>
+  <!-- After section -->
+  <text x="656" y="336" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="600" fill="#5CDB8F">After (fast):</text>
+  <rect x="656" y="346" width="510" height="76" rx="6" fill="#FFFFFF" fill-opacity="0.08"/>
+  <text x="670" y="364" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">SELECT DISTINCT c.name</text>
+  <text x="670" y="380" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">FROM customers c</text>
+  <text x="670" y="396" font-family="Courier New, monospace" font-size="9" fill="#FFFFFF">INNER JOIN orders o ON c.id = o.customer_id;</text>
+  <!-- Performance note -->
+  <text x="656" y="450" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="400" fill="#FFFFFF" opacity="0.75">INNER JOIN + DISTINCT is a single-pass</text>
+  <text x="656" y="466" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" font-weight="400" fill="#FFFFFF" opacity="0.75">operation the optimizer handles efficiently.</text>
+
+  <!-- Rule sentence at bottom center -->
+  <text x="640" y="628" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" fill="#FFFFFF" opacity="0.7" text-anchor="middle" font-style="italic">Make the JOIN rewrite explicit — do not rely on optimizer magic.</text>
+
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, sans-serif" font-size="11" text-anchor="end" fill="#FFFFFF">7</text>
+</svg>

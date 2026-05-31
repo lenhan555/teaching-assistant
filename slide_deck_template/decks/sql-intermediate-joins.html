@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slide Deck Blueprint — SQL Joins (Intermediate)</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green-dark:  #1A6B3A;
+  --green-mid:   #2EAA5E;
+  --green-light: #5CDB8F;
+  --white:       #FFFFFF;
+  --near-black:  #1A1A2E;
+  --grey-body:   #4A4A6A;
+  --font: 'Poppins', 'DM Sans', 'Inter', system-ui, sans-serif;
+  --margin: 5.6%;  /* ~0.75" on 13.33" slide */
+}
+
+/* ── Viewport wrapper ── */
+body { background: #111; font-family: var(--font); overflow: hidden; }
+
+.deck-wrapper {
+  width: 100vw; height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ── Slide base ── */
+.slide {
+  position: absolute;
+  width:  min(100vw, 177.78vh);
+  height: min(56.25vw, 100vh);
+  display: none;
+  flex-direction: column;
+  padding: var(--margin);
+  overflow: hidden;
+  font-family: var(--font);
+}
+.slide.active { display: flex; }
+
+.slide.dark  { background: radial-gradient(ellipse at 50% 15%, #3a9a6044 0%, var(--green-dark) 65%); color: #fff; }
+.slide.white { background: var(--white); color: var(--grey-body); }
+
+/* ── Headlines ── */
+.headline { font-weight: 700; line-height: 1.1; margin-bottom: 0.15em; }
+.headline-main { font-size: clamp(1.6rem, 4.2vh, 2.4rem); }
+.headline-large { font-size: clamp(2rem, 5.5vh, 3.2rem); }
+
+.dark-head  { color: #fff; }
+.hl-neutral { color: var(--near-black); }
+.hl-accent  { color: var(--green-mid); }
+
+/* ── Divider ── */
+.divider {
+  height: 2px; width: 100%;
+  background: var(--green-mid);
+  margin: 0.5em 0 0.8em;
+  border-radius: 1px;
+}
+
+/* ── Bullets ── */
+.bullets { list-style: none; padding: 0; }
+.bullets li {
+  padding: 0.28em 0 0.28em 1.2em;
+  font-size: clamp(0.75rem, 1.8vh, 1rem);
+  line-height: 1.55;
+  position: relative;
+}
+.bullets li::before { content: "◆"; position: absolute; left: 0; color: var(--green-mid); font-size: 0.65em; top: 0.42em; }
+.dark  .bullets li { color: rgba(255,255,255,0.88); }
+.white .bullets li { color: var(--grey-body); }
+
+/* ── Icon badge ── */
+.badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: clamp(28px, 4.5vh, 36px); height: clamp(28px, 4.5vh, 36px);
+  border-radius: 50%;
+  background: var(--green-mid); color: #fff;
+  font-size: clamp(0.65rem, 1.6vh, 0.9rem);
+  flex-shrink: 0;
+}
+.badge-lg {
+  width: clamp(40px, 6.5vh, 52px); height: clamp(40px, 6.5vh, 52px);
+  font-size: clamp(0.9rem, 2vh, 1.2rem);
+}
+
+/* ── Slide number ── */
+.slide-num {
+  position: absolute; bottom: 1.8%; right: 2.2%;
+  font-size: clamp(0.5rem, 1.2vh, 0.65rem);
+  opacity: 0.5;
+}
+.dark  .slide-num { color: #fff; }
+.white .slide-num { color: var(--grey-body); }
+
+/* ═══════════════════════════════════════
+   LAYOUT A — Cover
+════════════════════════════════════════ */
+.layout-a { padding: 0; }
+
+.glow {
+  position: absolute; border-radius: 50%;
+  background: radial-gradient(circle, var(--green-light), transparent 70%);
+  pointer-events: none;
+}
+.glow-top  { width: 55%; height: 55%; top: -15%; left: 20%; opacity: 0.18; }
+.glow-mid  { width: 30%; height: 30%; bottom: 5%; left: 3%; opacity: 0.12; }
+
+.layout-a-inner {
+  display: flex; width: 100%; height: 100%;
+  align-items: center; padding: var(--margin);
+}
+
+.frosted-card {
+  width: 40%; min-height: 60%;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.32);
+  border-radius: 1.2em;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 8% 7%;
+  display: flex; flex-direction: column; justify-content: center; gap: 0.6em;
+  flex-shrink: 0;
+}
+.frosted-card p { color: rgba(255,255,255,0.85); font-size: clamp(0.65rem, 1.6vh, 0.9rem); line-height: 1.55; }
+
+.badge-pill {
+  display: inline-block;
+  background: var(--green-mid); color: #fff;
+  border-radius: 2em; padding: 0.25em 0.9em;
+  font-size: clamp(0.55rem, 1.3vh, 0.75rem); font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.cover-hero {
+  flex: 1; display: flex; flex-direction: column;
+  justify-content: center; padding-left: 7%;
+}
+.display-headline {
+  font-size: clamp(2.4rem, 9vh, 5.5rem);
+  font-weight: 900; color: #fff; line-height: 1.0;
+  letter-spacing: -0.02em;
+}
+.display-accent { color: var(--green-light); }
+.cover-sub { color: rgba(255,255,255,0.7); font-size: clamp(0.7rem, 1.8vh, 1rem); margin-top: 0.6em; }
+
+/* ═══════════════════════════════════════
+   LAYOUT B — Left title / right icon list
+════════════════════════════════════════ */
+.layout-b-inner {
+  display: grid; grid-template-columns: 38% 1fr;
+  gap: 5%; width: 100%; height: 100%; align-items: center;
+}
+.b-left { display: flex; flex-direction: column; justify-content: center; }
+.b-right { display: flex; flex-direction: column; gap: 1.2vh; justify-content: center; }
+
+.icon-row { display: flex; align-items: flex-start; gap: 0.7em; }
+.icon-label { font-size: clamp(0.7rem, 1.8vh, 1rem); line-height: 1.5; padding-top: 0.1em; }
+.dark  .icon-label { color: rgba(255,255,255,0.88); }
+.white .icon-label { color: var(--grey-body); }
+
+/* ═══════════════════════════════════════
+   LAYOUT C — KPI strip
+════════════════════════════════════════ */
+.kpi-strip {
+  display: flex; align-items: center; justify-content: space-between;
+  flex: 1; margin-top: 1.5vh;
+}
+.kpi-col { flex: 1; text-align: center; padding: 0 2%; }
+.kpi-num {
+  font-size: clamp(1.6rem, 5.5vh, 3.2rem); font-weight: 800; line-height: 1;
+  color: var(--green-mid);
+}
+.dark .kpi-num { color: var(--green-light); }
+.kpi-lbl { font-size: clamp(0.6rem, 1.4vh, 0.8rem); margin-top: 0.3em; opacity: 0.75; }
+.kpi-arrow {
+  font-size: clamp(1rem, 2.8vh, 1.6rem); color: var(--green-mid);
+  padding: 0 1%; flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════
+   LAYOUT D — Quadrant matrix
+════════════════════════════════════════ */
+.quadrant-grid {
+  position: relative; flex: 1; margin-top: 1.5vh;
+  display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+  gap: 2px;
+}
+.quad {
+  display: flex; align-items: center; justify-content: center;
+  padding: 4%; font-size: clamp(0.65rem, 1.6vh, 0.9rem);
+  text-align: center;
+}
+.dark  .quad { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.85); }
+.white .quad { background: rgba(0,0,0,0.03); color: var(--grey-body); }
+
+.quad-h-line, .quad-v-line {
+  position: absolute; background: var(--green-mid); opacity: 0.5; pointer-events: none;
+}
+.quad-h-line { top: 50%; left: 0; right: 0; height: 1px; transform: translateY(-50%); }
+.quad-v-line { left: 50%; top: 0; bottom: 0; width: 1px; transform: translateX(-50%); }
+
+/* ═══════════════════════════════════════
+   LAYOUT E — Chart + stat cards
+════════════════════════════════════════ */
+.chart-placeholder {
+  flex: 1; margin: 1.5vh 0;
+  border: 2px dashed var(--green-mid);
+  border-radius: 0.8em; display: flex; align-items: center; justify-content: center;
+  opacity: 0.5;
+}
+.dark  .chart-placeholder { background: rgba(255,255,255,0.04); }
+.white .chart-placeholder { background: rgba(46,170,94,0.05); }
+.chart-placeholder span { font-size: clamp(0.65rem, 1.5vh, 0.85rem); font-style: italic; }
+
+.stat-row { display: flex; gap: 3%; margin-top: 1.2vh; }
+.stat-card {
+  flex: 1; border-radius: 0.8em; padding: 5% 6%;
+  text-align: center;
+}
+.dark  .stat-card { background: rgba(255,255,255,0.12); }
+.white .stat-card { background: rgba(46,170,94,0.08); border: 1px solid rgba(46,170,94,0.25); }
+.stat-num { font-size: clamp(1.2rem, 4vh, 2.2rem); font-weight: 800; color: var(--green-mid); }
+.dark .stat-num { color: var(--green-light); }
+.stat-label { font-size: clamp(0.55rem, 1.3vh, 0.75rem); margin-top: 0.25em; opacity: 0.7; }
+
+/* ═══════════════════════════════════════
+   LAYOUT F — Dark hero
+════════════════════════════════════════ */
+.layout-f { align-items: center; justify-content: center; }
+.layout-f-inner {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 100%; gap: 4vh; text-align: center;
+}
+.f-icons { display: flex; gap: 5%; justify-content: center; width: 70%; }
+.f-col { display: flex; flex-direction: column; align-items: center; gap: 1.2vh; flex: 1; }
+.f-label { font-size: clamp(0.65rem, 1.6vh, 0.9rem); color: rgba(255,255,255,0.88); text-align: center; }
+
+/* ═══════════════════════════════════════
+   LAYOUT G — Two-stat opportunity
+════════════════════════════════════════ */
+.layout-g-inner {
+  display: grid; grid-template-columns: 52% 1fr;
+  gap: 4%; width: 100%; height: 100%; align-items: center;
+}
+.g-left { display: flex; flex-direction: column; justify-content: center; }
+.g-right { display: flex; flex-direction: column; gap: 4%; justify-content: center; }
+.g-stat { display: flex; flex-direction: column; align-items: flex-start; gap: 0.4vh; }
+.g-num { font-size: clamp(1.4rem, 4.5vh, 2.6rem); font-weight: 800; color: var(--green-mid); }
+.dark .g-num { color: var(--green-light); }
+.g-lbl { font-size: clamp(0.6rem, 1.4vh, 0.8rem); opacity: 0.75; }
+
+/* ── Controls ── */
+.controls {
+  position: fixed; bottom: 1.2rem; left: 50%; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 1rem;
+  background: rgba(0,0,0,0.55); backdrop-filter: blur(8px);
+  border-radius: 2em; padding: 0.4em 1.1em;
+  z-index: 100;
+}
+.controls button {
+  background: none; border: none; color: #fff; font-size: 1.1rem;
+  cursor: pointer; padding: 0.2em 0.5em; border-radius: 0.4em;
+  transition: background 0.15s;
+}
+.controls button:hover { background: rgba(255,255,255,0.15); }
+#counter { color: rgba(255,255,255,0.7); font-size: 0.8rem; min-width: 4.5em; text-align: center; font-family: var(--font); }
+
+/* ── Print / PDF ── */
+@media print {
+  body { background: none; overflow: visible; }
+  .deck-wrapper { display: block; width: 100%; height: auto; }
+  .slide {
+    display: flex !important;
+    position: relative;
+    width: 100%; height: auto;
+    min-height: 56.25vw;
+    page-break-after: always;
+    break-after: page;
+  }
+  .controls { display: none; }
+}
+
+</style>
+</head>
+<body>
+<div class="deck-wrapper">
+<div class="slide dark layout-a active" id="slide-1">
+    <div class="glow glow-top"></div>
+    <div class="glow glow-mid"></div>
+    <div class="layout-a-inner">
+      <div class="frosted-card">
+        <div class="badge-pill">SQL · Training</div>
+        <p>Subtitle: &quot;Mastering Every JOIN Type for Real-World Queries&quot;</p>
+      </div>
+      <div class="cover-hero">
+        <h1 class="display-headline">SQL<br><span class="display-accent">Joins</span></h1>
+        <p class="cover-sub">SQL Joins</p>
+      </div>
+    </div>
+    <div class="slide-num">1</div></div>
+<div class="slide white layout-b" id="slide-2">
+    <div class="layout-b-inner">
+      <div class="b-left">
+        <h1 class="headline headline-main"><span class="hl-neutral">Session</span> <span class="hl-accent">Agenda</span></h1>
+        <div class="divider"></div>
+      </div>
+      <div class="b-right">
+        
+        <div class="icon-row">
+          <span class="badge">◈</span>
+          <span class="icon-label">icon: book] JOIN Types — INNER, LEFT, RIGHT, FULL OUTER, CROSS, SELF</span>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">2</div></div>
+<div class="slide dark layout-f" id="slide-3">
+    <div class="glow glow-top"></div>
+    <div class="layout-f-inner">
+      <h1 class="headline headline-main dark-head">Learning Objectives</h1>
+      <div class="f-icons">
+        <div class="f-col">
+          <span class="badge badge-lg">◈</span>
+          <div class="f-label">By the end of this session you will be able to:</div>
+        </div></div>
+    </div>
+    <div class="slide-num">3</div></div>
+<div class="slide white layout-b" id="slide-4">
+    <div class="layout-b-inner">
+      <div class="b-left">
+        <h1 class="headline headline-main"><span class="hl-neutral">Core</span> <span class="hl-accent">JOINs</span></h1>
+        <div class="divider"></div>
+      </div>
+      <div class="b-right">
+        
+        <div class="icon-row">
+          <span class="badge">◈</span>
+          <span class="icon-label">INNER JOIN** — Returns only matched rows from both tables. Silent row drops if a key is missing on either side. Use when a match must exist.</span>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">4</div></div>
+<div class="slide dark layout-f" id="slide-5">
+    <div class="glow glow-top"></div>
+    <div class="layout-f-inner">
+      <h1 class="headline headline-main dark-head">Outer JOINs</h1>
+      <div class="f-icons">
+        <div class="f-col">
+          <span class="badge badge-lg">◈</span>
+          <div class="f-label">RIGHT JOIN** — Mirror of LEFT JOIN. All right-table rows; NULLs fill left side. Almost always rewritable as LEFT JOIN with swapped table order. Avoid mixing LEFT and RIGHT JOIN in the same query.</div>
+        </div></div>
+    </div>
+    <div class="slide-num">5</div></div>
+<div class="slide white layout-c" id="slide-6">
+    <h1 class="headline headline-main"><span class="hl-neutral">Special</span> <span class="hl-accent">JOINs</span></h1>
+    <div class="divider"></div>
+    <div class="kpi-strip"><div class="kpi-col"><div class="kpi-num">CROSS JOIN** → Result rows = Table A rows × Table B rows. No ON clause. Use for product matrices, calendar grids, test data. Risk: 1,000 × 1,000 = 1,000,000 rows</div><div class="kpi-lbl">sanity-check row counts first.</div></div></div>
+    <div class="slide-num">6</div></div>
+<div class="slide dark layout-g" id="slide-7">
+    <div class="layout-g-inner">
+      <div class="g-left">
+        <h1 class="headline headline-main dark-head">Subqueries vs JOINs</h1>
+        
+        <ul class="bullets "><li>Correlated subquery re-runs once per outer-query row → behaves like a nested loop → slow on large tables.</li></ul>
+      </div>
+      <div class="g-right">
+        <div class="g-stat">
+          <span class="badge badge-lg">◈</span>
+          <div class="g-num">Correlated subquery re-runs once per outer-query row → behaves like a nested loop → slow on large tables.</div>
+          <div class="g-lbl"></div>
+        </div></div>
+    </div>
+    <div class="slide-num">7</div></div>
+<div class="slide white layout-b" id="slide-8">
+    <div class="layout-b-inner">
+      <div class="b-left">
+        <h1 class="headline headline-main"><span class="hl-neutral">JOIN</span> <span class="hl-accent">Performance</span></h1>
+        <div class="divider"></div>
+      </div>
+      <div class="b-right">
+        
+        <div class="icon-row">
+          <span class="badge">◈</span>
+          <span class="icon-label">icon: database] Index join columns — foreign keys without an index cause full-table scans</span>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">8</div></div>
+<div class="slide dark layout-f" id="slide-9">
+    <div class="glow glow-top"></div>
+    <div class="layout-f-inner">
+      <h1 class="headline headline-main dark-head">In-Class Practice</h1>
+      <div class="f-icons">
+        <div class="f-col">
+          <span class="badge badge-lg">◈</span>
+          <div class="f-label">Task 1 (Easy): Write a LEFT JOIN returning all employees and their department names, including employees with no department.</div>
+        </div></div>
+    </div>
+    <div class="slide-num">9</div></div>
+<div class="slide white layout-b" id="slide-10">
+    <div class="layout-b-inner">
+      <div class="b-left">
+        <h1 class="headline headline-main"><span class="hl-neutral">Session</span> <span class="hl-accent">Summary</span></h1>
+        <div class="divider"></div>
+      </div>
+      <div class="b-right">
+        
+        <div class="icon-row">
+          <span class="badge">◈</span>
+          <span class="icon-label">icon: check-circle] INNER JOIN — matched rows only; silent row drops are the #1 gotcha</span>
+        </div>
+      </div>
+    </div>
+    <div class="slide-num">10</div></div>
+</div>
+<div class="controls">
+  <button onclick="prev()" title="Previous (←)">&#8592;</button>
+  <span id="counter">1 / 10</span>
+  <button onclick="next()" title="Next (→)">&#8594;</button>
+</div>
+<script>
+
+const slides = document.querySelectorAll('.slide');
+let cur = 0;
+
+function show(n) {
+  cur = Math.max(0, Math.min(n, slides.length - 1));
+  slides.forEach((s, i) => s.classList.toggle('active', i === cur));
+  document.getElementById('counter').textContent = (cur + 1) + ' / ' + slides.length;
+}
+
+function next() { show(cur + 1); }
+function prev() { show(cur - 1); }
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ')  { e.preventDefault(); next(); }
+  if (e.key === 'ArrowLeft')                    { e.preventDefault(); prev(); }
+  if (e.key === 'f' || e.key === 'F')           { document.documentElement.requestFullscreen?.(); }
+  if (e.key === 'Home')                          { show(0); }
+  if (e.key === 'End')                           { show(slides.length - 1); }
+});
+
+// Click right half to advance, left half to go back
+document.querySelector('.deck-wrapper').addEventListener('click', e => {
+  const mid = window.innerWidth / 2;
+  e.clientX > mid ? next() : prev();
+});
+
+show(0);
+
+</script>
+</body>
+</html>

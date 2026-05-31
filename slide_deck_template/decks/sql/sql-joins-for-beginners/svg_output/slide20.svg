@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <text x="60" y="100" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="30" font-weight="700" fill="#1A1A2E">CROSS JOIN —</text>
+  <text x="60" y="138" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="30" font-weight="700" fill="#2EAA5E">Worked Example</text>
+  <line x1="60" y1="152" x2="500" y2="152" stroke="#2EAA5E" stroke-width="1.5"/>
+  <!-- Code block -->
+  <rect x="60" y="165" width="500" height="140" rx="8" fill="#F4F4F8"/>
+  <text x="80" y="193" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#2EAA5E">SELECT</text>
+  <text x="148" y="193" font-family="Courier New, monospace" font-size="13" fill="#1A1A2E"> Customers.Name, Orders.Product</text>
+  <text x="80" y="215" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#2EAA5E">FROM</text>
+  <text x="128" y="215" font-family="Courier New, monospace" font-size="13" fill="#1A1A2E">   Customers</text>
+  <text x="80" y="237" font-family="Courier New, monospace" font-size="13" font-weight="700" fill="#2EAA5E">CROSS JOIN</text>
+  <text x="190" y="237" font-family="Courier New, monospace" font-size="13" fill="#1A1A2E"> Orders;</text>
+  <text x="80" y="270" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" fill="#4A4A6A" font-style="italic">Note: no ON clause — not an accident!</text>
+  <!-- Result table -->
+  <text x="60" y="330" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">Result (8 of 16 rows shown):</text>
+  <rect x="60" y="342" width="320" height="30" rx="4" fill="#2EAA5E"/>
+  <text x="80" y="362" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Name</text>
+  <text x="200" y="362" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Product</text>
+  <!-- rows -->
+  <rect x="60" y="372" width="320" height="24" fill="#E8F8EE"/><text x="80" y="389" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Alice</text><text x="200" y="389" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Laptop</text>
+  <rect x="60" y="396" width="320" height="24" fill="#FFFFFF"/><text x="80" y="413" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Alice</text><text x="200" y="413" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Phone</text>
+  <rect x="60" y="420" width="320" height="24" fill="#E8F8EE"/><text x="80" y="437" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Alice</text><text x="200" y="437" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Mouse</text>
+  <rect x="60" y="444" width="320" height="24" fill="#FFFFFF"/><text x="80" y="461" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Alice</text><text x="200" y="461" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Keyboard</text>
+  <rect x="60" y="468" width="320" height="24" fill="#E8F8EE"/><text x="80" y="485" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Bob</text><text x="200" y="485" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Laptop</text>
+  <rect x="60" y="492" width="320" height="24" fill="#FFFFFF"/><text x="80" y="509" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Bob</text><text x="200" y="509" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Phone</text>
+  <rect x="60" y="516" width="320" height="24" fill="#E8F8EE"/><text x="80" y="533" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Bob</text><text x="200" y="533" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Mouse</text>
+  <rect x="60" y="540" width="320" height="24" fill="#FFFFFF"/><text x="80" y="557" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Bob</text><text x="200" y="557" font-family="Courier New, monospace" font-size="11" fill="#4A4A6A">Keyboard</text>
+  <rect x="60" y="342" width="320" height="222" rx="4" fill="none" stroke="#2EAA5E" stroke-width="1.5"/>
+  <text x="60" y="585" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A" font-style="italic">(8 of 16 rows — 8 more for Carol and Dan)</text>
+  <!-- Matrix diagram -->
+  <text x="450" y="155" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="13" font-weight="700" fill="#1A1A2E">Combination matrix (4×4 = 16 results):</text>
+  <!-- Matrix headers -->
+  <text x="560" y="185" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#4A4A6A" text-anchor="middle">Laptop</text>
+  <text x="650" y="185" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#4A4A6A" text-anchor="middle">Phone</text>
+  <text x="740" y="185" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#4A4A6A" text-anchor="middle">Mouse</text>
+  <text x="830" y="185" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#4A4A6A" text-anchor="middle">Keyboard</text>
+  <!-- Row labels and cells -->
+  <text x="490" y="218" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#4A4A6A">Alice</text>
+  <text x="490" y="268" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#4A4A6A">Bob</text>
+  <text x="490" y="318" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#4A4A6A">Carol</text>
+  <text x="490" y="368" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="10" fill="#4A4A6A">Dan</text>
+  <!-- Grid cells -->
+  <rect x="520" y="195" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="610" y="195" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="700" y="195" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="790" y="195" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="520" y="245" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="610" y="245" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="700" y="245" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="790" y="245" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="520" y="295" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="610" y="295" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="700" y="295" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="790" y="295" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="520" y="345" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="610" y="345" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="700" y="345" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <rect x="790" y="345" width="80" height="40" rx="3" fill="#E8F8EE"/>
+  <!-- dots in cells -->
+  <circle cx="560" cy="215" r="5" fill="#2EAA5E"/>
+  <circle cx="650" cy="215" r="5" fill="#2EAA5E"/>
+  <circle cx="740" cy="215" r="5" fill="#2EAA5E"/>
+  <circle cx="830" cy="215" r="5" fill="#2EAA5E"/>
+  <circle cx="560" cy="265" r="5" fill="#2EAA5E"/>
+  <circle cx="650" cy="265" r="5" fill="#2EAA5E"/>
+  <circle cx="740" cy="265" r="5" fill="#2EAA5E"/>
+  <circle cx="830" cy="265" r="5" fill="#2EAA5E"/>
+  <circle cx="560" cy="315" r="5" fill="#2EAA5E"/>
+  <circle cx="650" cy="315" r="5" fill="#2EAA5E"/>
+  <circle cx="740" cy="315" r="5" fill="#2EAA5E"/>
+  <circle cx="830" cy="315" r="5" fill="#2EAA5E"/>
+  <circle cx="560" cy="365" r="5" fill="#2EAA5E"/>
+  <circle cx="650" cy="365" r="5" fill="#2EAA5E"/>
+  <circle cx="740" cy="365" r="5" fill="#2EAA5E"/>
+  <circle cx="830" cy="365" r="5" fill="#2EAA5E"/>
+  <text x="660" y="420" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" fill="#4A4A6A" text-anchor="middle">Each dot = one result row</text>
+  <!-- Slide number -->
+  <text x="1215" y="700" font-family="Poppins, DM Sans, Inter, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#4A4A6A" opacity="0.4">20</text>
+</svg>
